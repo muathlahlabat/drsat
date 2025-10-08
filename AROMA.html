@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="اشتراك AROMA مميز يحتوي على آلاف القنوات والمسلسلات والأفلام. جرب الآن">
+  <meta name="keywords" content="اشتراك IPTV, اشتراك AROMA, باقات تلفزيون, قنوات رياضية, IPTV فلسطين, RK IPTV">
+  <meta name="author" content="RK IPTV">
+
+  <title>باقة AROMA</title>
+
+  <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/favicon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+
+
+  <!-- استدعاء Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      height: 2000px;
+      /* فقط لاختبار التمرير */
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      width: 60px;
+      height: 60px;
+      background-color: #25d366;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      z-index: 10000;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      color: white;
+      background-color: #20b954;
+    }
+
+    .square {
+      direction: rtl;
+      font-family: Arial;
+      padding: 30px;
+      font-size: 18px;
+    }
+
+    .separator {
+      height: 4px;
+      background-color: lightgray;
+      margin: 20px 0;
+      width: 100%;
+    }
+
+    .vertical-divider {
+      width: 2px;
+      background-color: lightgray;
+      margin: 0 20px;
+    }
+
+    .policy-modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      right: 0;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .modal-content {
+      background-color: #ffffff !important;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 600px;
+      margin: 100px auto;
+      font-family: Arial;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      direction: rtl;
+    }
+
+    .modal-content h3 {
+      background: #6b7280;
+      color: white;
+      padding: 14px 20px;
+      margin: 0;
+      text-align: right;
+      font-size: 18px;
+      direction: rtl;
+    }
+
+    .modal-content ul {
+      list-style: none;
+      margin: 0;
+      padding: 20px;
+      direction: rtl;
+    }
+
+    .modal-content ul li {
+      background: #f1f5f9;
+      margin-bottom: 10px;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: 600;
+      color: #374151;
+      box-shadow: inset 4px 0 0 #9ca3af;
+      direction: rtl;
+    }
+
+    .close {
+      position: absolute;
+      left: 5px;
+      top: -5px;
+      font-size: 22px;
+      color: #dc2626;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .product-columns {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row !important;
+    }
+
+    @media (min-width: 769px) {
+      #mobileMenu .menu-logo {
+        display: none !important;
+      }
+
+    }
+
+    .top-info ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: flex-end;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .top-info li {
+      font-size: 14px;
+      color: #374151;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* ✅ زر القائمة (الهامبرغر) */
+    .mobile-menu-toggle {
+      display: none;
+      ;
+      top: -20px;
+    }
+
+    /* ✅ تنسيق شاشة الموبايل */
+    @media (max-width: 768px) {
+      .product-columns {
+        flex-direction: column-reverse !important;
+      }
+
+      .mobile-menu .nav-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+      }
+
+      .mobile-menu .nav-logo img {
+        max-width: 120px;
+        height: auto;
+      }
+
+      .logo img {
+        max-width: 80px !important;
+        height: auto;
+      }
+
+      .logo {
+        order: 1;
+        margin-top: -40px !important;
+        padding-top: 0 !important;
+      }
+
+      .menu-wrap {
+        margin-top: 40px !important;
+        padding-top: 0 !important;
+      }
+
+      .menu-nav {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+      }
+
+      .menu-logo img {
+        margin-bottom: 10px;
+      }
+
+      /* ✅ زر القائمة (هامبرغر) يظهر فقط بالموبايل */
+      .mobile-menu-toggle {
+        display: inline-block;
+        position: relative;
+        background: none;
+        border: none;
+        font-size: 26px !important;
+        color: #111827;
+        cursor: pointer;
+        z-index: 1000;
+        padding: 5px;
+        margin-left: 10px;
+      }
+
+      .top-info ul {
+        flex-direction: column !important;
+        align-items: flex-end !important;
+        gap: 6px !important;
+        text-align: right;
+        margin-top: 10px;
+      }
+
+      .top-info li {
+        font-size: 13px !important;
+      }
+
+      .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+      }
+
+      h2 {
+        font-size: 22px !important;
+      }
+
+      .modal-content {
+        width: 90% !important;
+        margin: 20px auto !important;
+        padding: 15px !important;
+      }
+
+      .modal-content h3 {
+        font-size: 16px !important;
+      }
+
+      .modal-content ul li {
+        font-size: 14px !important;
+      }
+
+      .duration-btn {
+        font-size: 14px !important;
+        padding: 8px 12px !important;
+      }
+
+      #buyBtn {
+        font-size: 14px !important;
+        padding: 10px 12px !important;
+      }
+
+      .separator {
+        margin: 14px 0 !important;
+      }
+
+      .product-image {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .section-space>.container>div>div>div {
+        width: 100% !important;
+      }
+
+      .footer-icons {
+  margin-top: 15px;
+  text-align: center !important;
+}
+
+.footer-icons a {
+  color: white;
+  font-size: 20px;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* تأثير hover بلون الشعار */
+.footer-icons a:hover .fa-facebook-f {
+  color: #1877F2; /* أزرق فيسبوك */
+}
+
+.footer-icons a:hover .fa-tiktok {
+  color: #000; /* وردي إنستغرام */
+}
+
+.footer-icons a:hover .fa-whatsapp {
+  color: #25D366; /* أخضر واتساب */
+}
+    }
+
+    .top-info ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: flex-end;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      direction: rtl;
+      text-align: right;
+    }
+
+    .top-info li {
+      display: flex;
+      flex-direction: row-reverse;
+      /* ✅ يعكس الأيقونة والنص */
+      align-items: center;
+      gap: 5px;
+      font-size: 14px;
+      color: #374151;
+      text-align: right;
+      /* ✅ يجبر النص يلتزم اليمين */
+      direction: rtl;
+      /* ✅ يتأكد أن كل شيء من اليمين */
+    }
+
+    .gallery-modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding-top: 70px;
+      direction: rtl;
+    }
+
+    .gallery-content {
+      position: relative;
+      margin: auto;
+      padding: 20px;
+      width: 40%;
+      max-width: 700px;
+      background: white;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .gallery-slide {
+      display: none;
+      width: 100%;
+      height: 400px;
+      object-fit: contain;
+    }
+
+    .gallery-slide.active {
+      display: block;
+    }
+
+    .close-btn {
+      color: #dc2626;
+      position: absolute;
+      top: -12px;
+      left: 2px;
+      font-size: 30px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      padding: 12px;
+      color: #111;
+      font-size: 26px;
+      font-weight: bold;
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: 50%;
+      transform: translateY(-50%);
+    }
+
+    .prev {
+      right: 10px;
+    }
+
+    .next {
+      left: 10px;
+    }
+
+
+    .gallery-thumbnail {
+      position: relative;
+      width: 260px;
+      /* عدل الحجم حسب ما بدك */
+      cursor: pointer;
+      margin: 0 auto;
+      /* لتوسيطها */
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-thumbnail:hover {
+      transform: scale(1.03);
+    }
+
+    .gallery-thumbnail img {
+      width: 100%;
+      display: block;
+      border-radius: 10px;
+    }
+
+    .gallery-thumbnail .overlay-text {
+      position: absolute;
+      bottom: 0;
+      background: rgba(17, 24, 39, 0.6);
+      /* خلفية شفافة */
+      color: #fff;
+      width: 100%;
+      text-align: center;
+      font-weight: bold;
+      font-size: 14px;
+      padding: 10px 5px;
+      font-family: Arial, sans-serif;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
+   .footer-icons {
+  margin-top: 15px;
+  text-align: right;
+}
+
+.footer-icons a {
+  color: white;
+  font-size: 30px;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* تأثير hover بلون الشعار */
+.footer-icons a:hover .fa-facebook-f {
+  color: #1877F2; /* أزرق فيسبوك */
+}
+
+.footer-icons a:hover .fa-tiktok {
+  color: #000; /* وردي إنستغرام */
+}
+
+.footer-icons a:hover .fa-whatsapp {
+  color: #25D366; /* أخضر واتساب */
+}
+
+
+  </style>
+
+
+
+
+  <!-- CSS here -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/animate.min.css">
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="assets/css/jquery.flipster.css">
+  <link rel="stylesheet" href="assets/css/jquery-ui.css">
+  <link rel="stylesheet" href="assets/css/nice-select.css">
+  <link rel="stylesheet" href="assets/css/flaticon.css">
+  <link rel="stylesheet" href="assets/css/odometer.css">
+  <link rel="stylesheet" href="assets/css/swiper.min.css">
+  <link rel="stylesheet" href="assets/css/slick.css">
+  <link rel="stylesheet" href="assets/css/default.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- زر واتساب -->
+  <a href="https://wa.me/970598900377" target="_blank" class="whatsapp-float">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+  <!-- Header -->
+  <header>
+
+    <div class="col-xl-4 col-md-5 col-sm-5">
+      <div class="header-top-right"></div>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <div id="sticky-header" class="menu-area">
+      <div class="container" style="direction: rtl; text-align: right;">
+        <div class="row">
+          <div class="col-12">
+            <div class="menu-wrap">
+              <nav class="menu-nav">
+
+
+                <!-- زر الهامبرغر -->
+                <button class="mobile-menu-toggle d-lg-none" onclick="toggleMobileMenu()">
+                  <i class="fa fa-bars"></i>
+                </button>
+
+
+                <div class="logo">
+                  <a href="index.html"><img src="assets/imgs/logo/logo.png" alt=""></a>
+                </div>
+
+                <div class="navbar-wrap main-menu d-none d-lg-flex">
+                  <ul class="navigation">
+                    <li><a href="index.html">الرئيسية</a></li>
+                    <li><a href="tv-packages.html">باقات التلفزيون</a></li>
+                    <li><a href="receiver-packages.html">باقات الرسيفر</a></li>
+                    <li><a href="Paid-Players.html">تطبيقات مشغلات مدفوعة</a></li>
+                  </ul>
+
+                  <li class="header-btn">
+                    <a target="_blank"
+                      href="https://api.whatsapp.com/send/?phone=970598900377&text=مرحبا, هل يمكنني الحصول على تجربة؟"
+                      class="btn transparent-btn">
+                      اطلب تجربة
+                    </a>
+                  </li>
+                </div>
+
+            </div>
+            <!-- Mobile Menu  -->
+            <div class="mobile-menu">
+              <nav class="menu-box">
+                <div class="nav-logo"><a href="index.html"><img src="assets/imgs/logo/logo.png" alt="" title=""></a>
+                </div>
+                <div class="menu-outer">
+                  <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+                </div>
+                <!-- <div class="social-links">
+                                    <ul class="clearfix">
+                                        <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                                        <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                                        <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
+                                        <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                                        <li><a href="#"><span class="fab fa-youtube"></span></a></li>
+                                    </ul>
+                                </div>-->
+              </nav>
+            </div>
+            <div class="menu-backdrop"></div>
+            <!-- End Mobile Menu -->
+          </div>
+
+
+
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+  <!-- Package Details Section -->
+  <section class="section-space" style="padding:40px 0; margin-top: -80px;">
+    <div class="container">
+      <div
+        style="background-color:#111827; color:white; padding:14px 18px; border-radius:8px; text-align:right; font-weight:700; font-family:Arial; font-size:16px;"
+        dir="rtl">
+        جميع اشتراكات التلفزيون التفاعلي تعمل على جميع شاشات سمارت تي في و أجهزة تي في بوكس وشاشات ال جي و سامسونج و
+        اجهزة ال تي في و اجهزة موبايل ايفون واندرويد وجميع أجهزة الكمبيوتر
+      </div>
+      <!-- كارت واحد يحتوي العمودين -->
+      <div
+        style="background:#fff;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.08);border:1px solid #eef2f7;overflow:hidden;">
+        <div class="product-columns" style="display: flex; flex-wrap: wrap;">
+
+
+
+          <!-- العمود الأيسر: تفاصيل الاشتراك -->
+          <div style="width: 55%; padding: 24px;" class="d-flex flex-column" dir="rtl">
+            <h2 style="margin:0;font-size:28px;font-weight:800;color:#111827">اشتراك AROMA المميز</h2>
+            <p style="margin:14px 0 6px;color:#0f172a;line-height:1.9">
+              تواصل معنا لتجريب الخدمة مجاناً – السعر يشمل التفعيل على الشاشات – السعر لمدة 12 شهر
+            </p>
+
+            <div class="separator"></div>
+
+            <!-- السعر -->
+            <div style="display:flex;align-items:center;gap:100px;">
+              <div style="font-weight:800;color:#111827" dir="rtl">السعر</div>
+              <div><span id="selectedPrice" data-currency="$"
+                  style="color:#e11d48;font-weight:800;font-size:18px">$15</span></div>
+            </div>
+
+
+
+
+            <div class="separator"></div>
+
+
+            <!-- مدة الاشتراك -->
+            <div>
+              <div style="font-weight:800;color:#111827;margin-bottom:8px" dir="rtl">مدة الاشتراك</div>
+              <div style="display:flex;gap:10px;flex-wrap:wrap" dir="rtl">
+                <button type="button" class="duration-btn" data-months="3" data-price="15"
+                  style="padding:10px 18px;border-radius:10px;border:2px solid #375cf8;background:#375cf8;color:#fff;font-weight:800;">
+                  3 أشهر
+                </button>
+                <button type="button" class="duration-btn" data-months="6" data-price="25"
+                  style="padding:10px 18px;border-radius:10px;border:2px solid #375cf8;background:#fff;color:#375cf8;font-weight:800;">
+                  6 أشهر
+                </button>
+                <button type="button" class="duration-btn" data-months="12" data-price="40"
+                  style="padding:10px 18px;border-radius:10px;border:2px solid #375cf8;background:#fff;color:#375cf8;font-weight:800;">
+                  12 شهر
+                </button>
+              </div>
+
+            </div>
+
+
+            <div class="separator"></div>
+
+
+
+            <!-- الكمية -->
+            <div>
+              <div style="font-weight:800;color:#111827;margin-bottom:8px" dir="rtl">اختر الكمية</div>
+              <div style="display:flex;gap:10px;align-items:center">
+                <div style="display:inline-flex;align-items:center;border:1px solid #e5e7eb;border-radius:10px;">
+                  <button type="button" id="qtyMinus"
+                    style="width:42px;height:42px;border:none;background:#f8fafc;">−</button>
+                  <input id="qtyInput" type="text" value="1"
+                    style="width:60px;height:42px;border:none;text-align:center;font-weight:700;" readonly>
+                  <button type="button" id="qtyPlus"
+                    style="width:42px;height:42px;border:none;background:#f8fafc;">+</button>
+                </div>
+                <a id="buyBtn"
+                  href="https://api.whatsapp.com/send/?phone=970598900377&text=مرحبا، أريد شراء اشتراك AROMA لمدة 3 أشهر بكمية 1"
+                  target="_blank"
+                  style="flex:1;background:#22c55e;color:#fff;padding:11px 16px;border-radius:10px;text-align:center;text-decoration:none;font-weight:800;">
+                  شراء المنتج أو الاشتراك في الخدمة
+                </a>
+              </div>
+            </div>
+            <div class="separator"></div>
+
+
+            <!-- نسخ رابط المنتج -->
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap"
+              dir="rtl">
+              <button id="copyLinkBtn" type="button" style="background:#f1f5f9;border:1px solid #e2e8f0;color:#0f172a;
+                 padding:8px 12px;border-radius:8px;cursor:pointer">
+                <div style="color:#111827;font-weight:800">نسخ رابط المنتج</div>
+              </button>
+            </div>
+
+            <div class="separator"></div>
+
+            <!--  طريقة الدفع -->
+
+            <div style="font-weight:800;color:#111827;">طريقة الدفع</div>
+            <div style="font-weight:600;color:#111827;margin-top:20px;">الدفع عن طريق البنوك والمحفظات الفلسطينية</div>
+            <ul style="list-style:none;padding:0;margin-top:10px;line-height:2;font-weight:700;">
+              <li><i class="fa-solid fa-square" style="color:#dc2626;margin-left:8px;"></i> بنك فلسطين</li>
+              <li><i class="fa-solid fa-square" style="color:#2563eb;margin-left:8px;"></i> البنك العربي</li>
+              <li><i class="fa-solid fa-square" style="color:#7c3aed;margin-left:8px;"></i> محفظة Reflect</li>
+              <li><i class="fa-solid fa-square" style="color:#78350f;margin-left:8px;"></i> محفظة PalPay</li>
+            </ul>
+            <div style="font-weight:600; color:#111827; margin-top:20px;">
+              <i class="fa-brands fa-cc-visa" style="margin-left:8px;"></i>
+              الدفع عن طريق الفيزا
+            </div>
+            <p style="list-style:none;padding:0;margin-top:10px;line-height:2;font-weight:700;">(يضاف مبلغ بسيط بدل
+              عمولات مصرفية)</p>
+
+            <div style="font-weight:600; color:#111827; margin-top:20px;">
+              <i class="fa-brands fa-cc-paypal" style="margin-left:8px;"></i>
+              الدفع عن طريق بايبال Paypal
+            </div>
+            <p style="list-style:none;padding:0;margin-top:10px;line-height:2;font-weight:700;">(يضاف مبلغ بسيط بدل
+              عمولات مصرفية)</p>
+
+            <div style="font-weight:600; color:#111827; margin-top:20px;">
+              <i class="fa-brands fa-cc-paypal" style="margin-left:8px;"></i>
+              الدفع عن طريق البنوك الإسرائيلية
+            </div>
+            <p style="list-style:none;padding:0;margin-top:10px;line-height:2;font-weight:700;">(يضاف مبلغ بسيط بدل
+              عمولات مصرفية)</p>
+
+            <div style="font-weight:600; color:#111827; margin-top:20px;">
+              <i class="fa-solid fa-car-side" style="margin-left:8px;"></i>
+              الدفع عند الاستلام
+            </div>
+            <p style="list-style:none;padding:0;margin-top:10px;line-height:2;font-weight:700;"> (يضاف 20 شيكل رسوم
+              التوصيل داخل الضفة، 30 شيكل القدس، 70 شيكل مدن ال48)</p>
+          </div>
+
+
+
+
+          <div class="vertical-divider"></div>
+          <!-- العمود الأيمن: صورة المنتج -->
+          <div style="width: 40%; padding: 24px;" class="d-flex justify-content-center align-items-center flex-column">
+
+            <img src="assets/imgs/images/TV/AROMA.png" alt="AROMA" class="product-image">
+
+
+            <div class="separator"></div>
+
+            <ul
+              style="margin:0;padding:0 18px;line-height:2;list-style:none;padding:0;margin-top:10px;line-height:2;font-weight:700;"
+              dir="rtl">
+              <li>-جودة مشاهدة فائقة تصل حتى 4K مع دعم HD و FHD.</li>
+              <li>-أكثر من 11,000 قناة مباشرة + 18,000 من الأفلام + 8,000 من المسلسلات (VOD).</li>
+              <li>-قنوات رياضية + وثائقية + قنوات الأطفال + باقات عربية وعالمية.</li>
+              <li>-تطبيقات مخصصة للأندرويد/التلفزيون الذكي/Android Box مع ثبات عالي.</li>
+              <li>-إمكانية تجربة مجانية قبل الاشتراك.</li>
+              <li>-دعم فني متواصل وخطط مخصصة للموزعين.</li>
+            </ul>
+
+          </div>
+
+        </div>
+      </div>
+      <div style="background:#f8f9fa;padding:10px;border-radius:10px;text-align:center;">
+        <a href="javascript:void(0)" onclick="openModal('deliveryModal')"
+          style="background:#f1f5f9;padding:8px 12px;border-radius:6px;margin-left:6px;text-decoration:none;color:#111827;font-weight:700;">
+          <i class="fa-solid fa-shield-halved" style="margin-left:5px;"></i> سياسة التوصيل
+        </a>
+        <a href="javascript:void(0)" onclick="openModal('returnModal')"
+          style="background:#f1f5f9;padding:8px 12px;border-radius:6px;margin-left:6px;text-decoration:none;color:#111827;font-weight:700;">
+          <i class="fa-solid fa-shield-halved" style="margin-left:5px;"></i> سياسة التبديل
+        </a>
+        <a href="javascript:void(0)" onclick="openModal('cancelModal')"
+          style="background:#f1f5f9;padding:8px 12px;border-radius:6px;text-decoration:none;color:#111827;font-weight:700;">
+          <i class="fa-solid fa-shield-halved" style="margin-left:5px;"></i> سياسة الإلغاء
+        </a>
+      </div>
+
+      <!-- Modal Template -->
+      <!-- نافذة سياسة التوصيل -->
+      <div id="deliveryModal" class="policy-modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('deliveryModal')">&times;</span>
+          <h3>سياسة التوصيل</h3>
+          <ul>
+            <li>يتم التوصيل عادة خلال ثلاثة أيام عمل.</li>
+            <li>توصيل الطلبات يتم من خلال شركات توصيل مرخصة في البلاد.</li>
+            <li>يتم الإتصال بك من خلال مندوب التوصيل قبل أن يصل الى عنوانك.</li>
+            <li>يتم دفع ثمن البضائع المطلوبة إلى موظف التوصيل في حال اخترت وسيلة الدفع عند الإستلام.</li>
+            <li>الطلبات الكبيرة قد يترتب عليها رسوم توصيل إضافية، نقوم بالتواصل معك و إخبارك بأي رسوم إضافية قبل إرسال
+              طلبك.</li>
+          </ul>
+        </div>
+      </div>
+
+
+
+
+      <div id="returnModal" class="policy-modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('returnModal')">&times;</span>
+          <h3>سياسة التبديل</h3>
+          <ul>
+            <li>طلب التبديل خلال 24 ساعة من الاستلام.</li>
+            <li>الاحتفاظ بالفاتورة.</li>
+            <li>تكاليف التوصيل على المشتري.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="cancelModal" class="policy-modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal('cancelModal')">&times;</span>
+          <h3>سياسة الإلغاء</h3>
+          <ul>
+            <li>الإلغاء ممكن قبل التجهيز.</li>
+            <li>غير ممكن إذا تم تسليمه لشركة التوصيل.</li>
+          </ul>
+        </div>
+      </div>
+
+
+    </div>
+    </section>
+
+  <!-- تفاصيل إضافية (جديدة تحت القسم الأول) -->
+  <section class="section-space" style="padding:26px 0;">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- يسار: التوصيل متاح إلى المناطق التالية -->
+        <div class="col-lg-4">
+          <div
+            style="background:#fff;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.08);border:1px solid #eef2f7;padding:18px"
+            dir="rtl">
+            <h4 style="margin:0 0 14px;font-weight:900;color:#111827">التوصيل متاح إلى المناطق التالية</h4>
+            <div style="display:flex;flex-wrap:wrap;gap:10px">
+              <!-- عدّل/زِد المدن براحتك -->
+              <span
+                style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:999px;padding:8px 14px;font-weight:700;color:#0f172a">نابلس</span>
+              <span
+                style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:999px;padding:8px 14px;font-weight:700;color:#0f172a">جنين</span>
+              <span
+                style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:999px;padding:8px 14px;font-weight:700;color:#0f172a">طولكرم</span>
+              <span
+                style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:999px;padding:8px 14px;font-weight:700;color:#0f172a">قلقيلية</span>
+              <span
+                style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:999px;padding:8px 14px;font-weight:700;color:#0f172a">رام
+                الله</span>
+              <span
+                style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:999px;padding:8px 14px;font-weight:700;color:#0f172a">سلفيت</span>
+              <span
+                style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:999px;padding:8px 14px;font-weight:700;color:#0f172a">الخليل</span>
+              <span
+                style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:999px;padding:8px 14px;font-weight:700;color:#0f172a">اريحا</span>
+              <span
+                style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:999px;padding:8px 14px;font-weight:700;color:#0f172a">ضواحي
+                القدس</span>
+              <span
+                style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:999px;padding:8px 14px;font-weight:700;color:#0f172a">بيت
+                لحم</span>
+              <span
+                style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:999px;padding:8px 14px;font-weight:700;color:#0f172a">الداخل
+                48</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- يمين: تفاصيل المنتج -->
+        <div class="col-lg-8">
+          <div
+            style="background:#fff;border-radius:14px;box-shadow:0 10px 30px rgba(0,0,0,.08);border:1px solid #eef2f7;padding:18px"
+            dir="rtl">
+
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
+              <h4 style="margin:0;font-weight:900;color:#111827">محتوى اشتراك AROMA</h4>
+            </div>
+            <hr style="border:none;border-top:1px solid #eef2f7;margin:12px 0">
+
+            <ul style="margin:0;padding:0 18px;line-height:2;color:#0f172a">
+              <li>القنوات: يحتوي الاشتراك على أكثر من11 ألف قناة حيث يضم جميع القنوات العربية وعدد كبير من الباقات من مختلف القارات واللغات. </li>
+              <li>الأفلام: يضم الاشتراك أكثر من 18 ألف فيلم بنسخ أصلية مع أكثر من جودة، حيث يحتوي على أفلام بترجمة عربية مدمجة وأيضا باقات بترجمة وأصوات متعددة تضم عدد كبير من اللغات وأيضا باقات خاصة بالأفلام بجودة فائقة الوضوح.</li>
+              <li>المسلسلات: يضم الاشتراك أكثر من 8 ألاف مسلسل بنسخ أصلية، حيث يحتوي على مسلسلات عربية وتركية وعالمية بترجمة عربية مدمجة وأيضا باقات مسلسلات أجنبية بترجمة عربية وأيضا باقات خاصة بالمسلسلات بجودة فائقة الوضوح.</li>
+            </ul>
+            <hr style="border:none;border-top:1px solid #eef2f7;margin:12px 0">
+            
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
+              <h4 style="margin:0;font-weight:900;color:#111827">مميزات اشتراك AROMA</h4>
+            </div>
+            <hr style="border:none;border-top:1px solid #eef2f7;margin:12px 0">
+
+            <ul style="margin:0;padding:0 18px;line-height:2;color:#0f172a">
+              <li>1-جودة عالية الوضوح: أهم ميزة في اشتراك أروما هي الجودة المميزة. إذا كنت تمتلك تلفاز يدعم جودة 4ك، سوف تشاهد محتوى عالي الجودة يلبي توقعاتك. الألوان واضحة، والتفاصيل دقيقة، لا شيء يضاهي مشاهدة الأفلام أو المسلسلات على اشتراك أروما.</li>
+              <li>2-محتوى متنوع يرضي كل الأذواق: مع اشتراك أروما، ستستمتع بباقة ضخمة من القنوات من جميع أنحاء العالم. سواء كنت من عشاق المباريات الرياضية، الأفلام، أو البرامج المتنوعة، أروما يقدم لك كل هذا وأكثر. بالإضافة إلى قنوات متخصصة في مختلف المجالات مثل الطبخ، السياحة، الوثائقية، وغيرها.</li>
+              <li>3-دعم للأجهزة المتعددة: ستشاهد محتوى 4k على جميع الأجهزة التي تستخدمها. سواء كان عندك تلفزيون ذكي، بوكس أندرويد، كمبيوتر، أو حتى موبايل، تقدر تتابع برامجك المفضلة بكل سهولة عبر التطبيق المخصص. خدمة أروما تدعم أنظمة التشغيل المختلفة مثل Android وiOS وWindows، تابع برامجك المفضلة في أي مكان وفي أي وقت.</li>
+              <li>4-الدعم والتحديثات المستمرة: اشتراك أروما يضمن لك التحديث اليومي. حيث يتم إضافة قنوات جديدة وتحديث الأفلام وحلقات المسلسلات وتحسين جودة البث بشكل دوري، يعني أنك يوميا ستكتشف شيء جديد ومحتوى حديث. الدعم الفني متوفر للإجابة على أي استفسار ومساعدتك في حل أي مشكلة تواجهك</li>
+              <li>5-واجهة مستخدم بسيطة وسهلة: اشتراك أروما يتوفر بأكثر من تطبيق مع واجهات سهلة الاستخدام. التنقل بين القنوات سلس وسريع، بعض التطبيقات اوفر إمكانية ترتيب القنوات والباقات، سهولة البحث عن أي مسلسل أو فلم. سواء كنت كبير بالسن أو شاب، واجهات المستخدم تناسب كل الأعمار وتجعل تجربة المشاهدة أكثر متعة.</li>
+            </ul>
+            <hr style="border:none;border-top:1px solid #eef2f7;margin:12px 0">
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
+              <h4 style="margin:0;font-weight:900;color:#111827">طريقة تشغيل اشتراك AROMA</h4>
+            </div>
+            <hr style="border:none;border-top:1px solid #eef2f7;margin:12px 0">
+
+            <ul style="margin:0;padding:0 18px;line-height:2;color:#0f172a">
+              <li style="font-weight:600">- على تلفزيونات ورسيفرات الاندرويد وموبايلات الاندرويد</li>
+              <li style="font-weight:400">الطريقة الأولى:</li>
+              <li>1- حمل تطبيق downloader من متجر google play او من تطبيق Aptoide tv </li>
+              <li>2- افتح تطبيق downloader واكتب الرقم 6564009 ثم اضغط go</li>
+              <li>3- سيظهر لديك متجرنا على منصة Linktree, حرك المؤشر للأسفل حتى تصل الى تطبيق AROMA قم بالضغط عليه ليبدأ تحميل التطبيق</li>
+              <li>4- بعد تحميل التطبيق اضغط على install لتثبيت التطبيق (إذا طلب منك تطبيق ال downloader صلاحية التنزيل
+                قم بإعطائه الصلاحية المطلوبة)</li>
+              <li>5- قم بإدخال اسم المستخدم وكلمة المرور التي قمنا بإرسالها لك</li>
+            </ul>
+
+            <hr style="border:none;border-top:1px solid #eef2f7;margin:12px 0">
+
+            <!-- ✅ زر أو صورة مصغرة لفتح معرض صور -->
+            <div class="gallery-thumbnail" onclick="openGalleryModal(this)"
+              data-images='["assets/imgs/images/TV/downloader-1.png",
+                            "assets/imgs/images/TV/aroma-1.png", 
+                            "assets/imgs/images/TV/aroma-2.png"]'>
+              <img src="assets/imgs/images/TV/downloader-1.png" alt="عرض الشرح بالصور">
+              <div class="overlay-text">انقر هنا لمشاهدة الشرح بالصور</div>
+            </div>
+
+
+
+
+
+            <hr style="border:none;border-top:1px solid #eef2f7;margin:12px 0">
+
+            <ul style="margin:0;padding:0 18px;line-height:2;color:#0f172a">
+              <li style="font-weight:400">الطريقة الثانية:</li>
+              <li>1- افتح المتصفح واكتب الموقع التالي linktr.ee/drsat</li>
+              <li>- سيظهر لديك متجرنا على منصة Linktree, حرك المؤشر للأسفل حتى تصل الى تطبيق AROMA قم بالضغط عليه ليبدأ تحميل التطبيق</li>
+              <li>3- بعد تحميل التطبيق اضغط على install لتثبيت التطبيق (إذا طلب منك المتصفح صلاحية التنزيل قم بإعطائه
+                الصلاحية المطلوبة)</li>
+              <li>4- قم بإدخال اسم المستخدم وكلمة المرور التي قمنا بإرسالها لك</li>
+            </ul>
+
+            <hr style="border:none;border-top:1px solid #eef2f7;margin:12px 0">
+
+            <!-- ✅ زر أو صورة مصغرة لفتح معرض صور -->
+            <div class="gallery-thumbnail" onclick="openGalleryModal(this)"
+              data-images='["assets/imgs/images/TV/aroma-1.png", 
+                            "assets/imgs/images/TV/aroma-2.png"]'>
+              <img src="assets/imgs/images/TV/aroma-1.png" alt="عرض الشرح بالصور">
+              <div class="overlay-text">انقر هنا لمشاهدة الشرح بالصور</div>
+            </div>
+
+            <hr style="border:none;border-top:1px solid #eef2f7;margin:12px 0">
+
+           <ul style="margin:0;padding:0 18px;line-height:2;color:#0f172a">
+              <li style="font-weight:600">- على تلفزيونات ماركة LG أو التي تحمل نظام Web OS</li>
+              <li style="font-weight:400">الطريقة الاولى: (بدون رسوم إضافية)</li>
+              <li>1- افتح متجر التطبيقات LG content (إذا كانت أول مرة سيطلب منك عمل حساب جديد ضع ايميلك وكلمة سر خاصة
+                بك).</li>
+              <li>2- ابحث على تطبيق Iptv Smarters (انتبه ان يكون اسم المطور WHMCS Smarters).</li>
+              <li>3- قم بتثبيت التطبيق ثم افتح التطبيق سيظهر لك 4 خانات في الخانة الأول اكتب أي اسم تريده، في الخانة
+                الثانية اكتب اسم المستخدم، في الخانة الثالثة اكتب كلمة المرور، في الخانة الأخيرة اكتب رابط السيرفر
+                (البيانات يتم تزويدك بها من قبلنا عند الاشتراك او طلب تجربة مجانية).</li>
+            </ul>
+
+            <hr style="border:none;border-top:1px solid #eef2f7;margin:12px 0">
+
+            <!-- ✅ زر أو صورة مصغرة لفتح معرض صور -->
+            <div class="gallery-thumbnail" onclick="openGalleryModal(this)"
+              data-images='["assets/imgs/images/TV/iptv-smarters-1.jpg",
+                            "assets/imgs/images/TV/iptv-smarters-2.jpg",
+                             "assets/imgs/images/TV/iptv-smarters-3.jpg",
+                             "assets/imgs/images/TV/iptv-smarters-4.jpg"]'>
+              <img src="assets/imgs/images/TV/iptv-smarters-1.jpg" alt="عرض الشرح بالصور">
+              <div class="overlay-text">انقر هنا لمشاهدة الشرح بالصور</div>
+            </div>
+
+
+
+            <hr style="border:none;border-top:1px solid #eef2f7;margin:12px 0">
+
+            <ul style="margin:0;padding:0 18px;line-height:2;color:#0f172a">
+              <li style="font-weight:400">الطريقة الثانية: (رسوم إضافية)</li>
+              <li>1- افتح متجر التطبيقات LG content (إذا كانت أول مرة سيطلب منك عمل حساب جديد ضع ايميلك وكلمة سر خاصة
+                بك).</li>
+              <li>2- ابحث على تطبيق IBO ثم قم بتثبيته.</li>
+              <li>3- افتح التطبيق سيظهر لك رقم مميز Mac ID & Device Key قم بإرسالهم لنا لنقوم بتفعيل الاشتراك لديك
+                مباشرة.
+                *ملاحظة بعض الطرق قد لا تتوفر في بعض الموديلات.
+              </li>
+            </ul>
+
+            <hr style="border:none;border-top:1px solid #eef2f7;margin:12px 0">
+
+            <!-- ✅ زر أو صورة مصغرة لفتح معرض صور -->
+            <div class="gallery-thumbnail" onclick="openGalleryModal(this)"
+              data-images='["assets/imgs/images/TV/IBO-1.jpg",
+                            "assets/imgs/images/TV/IBO-2.jpg",
+                             "assets/imgs/images/TV/IBO-3.jpg",
+                             "assets/imgs/images/TV/IBO-4.jpg"]'>
+              <img src="assets/imgs/images/TV/IBO-1.jpg" alt="عرض الشرح بالصور">
+              <div class="overlay-text">انقر هنا لمشاهدة الشرح بالصور</div>
+            </div>
+
+
+            <hr style="border:none;border-top:1px solid #eef2f7;margin:12px 0">
+
+           <ul style="margin:0;padding:0 18px;line-height:2;color:#0f172a">
+              <li style="font-weight:600">- على تلفزيونات ماركة SAMSUNG</li>
+              <li style="font-weight:400">الطريقة الأولى: (بدون رسوم إضافية)</li>
+              <li>1- افتح متجر التطبيقات APPS (إذا كانت أول مرة سيطلب منك عمل حساب جديد ضع ايميلك وكلمة سر خاصة بك).
+              </li>
+              <li>2- ابحث على تطبيق Iptv Smarters (انتبه ان يكون اسم المطور WHMCS Smarters).</li>
+              <li>3- قم بتثبيت التطبيق ثم افتح التطبيق سيظهر لك 4 خانات في الخانة الأول اكتب أي اسم تريده، في الخانة
+                الثانية اكتب اسم المستخدم، في الخانة الثالثة اكتب كلمة المرور، في الخانة الأخيرة اكتب رابط السيرفر
+                (البيانات يتم تزويدك بها من قبلنا عند الاشتراك او طلب تجربة مجانية).</li>
+            </ul>
+
+            <hr style="border:none;border-top:1px solid #eef2f7;margin:12px 0">
+
+            <!-- ✅ زر أو صورة مصغرة لفتح معرض صور -->
+            <div class="gallery-thumbnail" onclick="openGalleryModal(this)"
+              data-images='["assets/imgs/images/TV/samsung-search.jpg",
+                            "assets/imgs/images/TV/iptv-smarters-1.jpg",
+                            "assets/imgs/images/TV/iptv-smarters-2.jpg",
+                            "assets/imgs/images/TV/samsung-apps.jpg",
+                             "assets/imgs/images/TV/iptv-smarters-3.jpg",
+                             "assets/imgs/images/TV/iptv-smarters-4.jpg"]'>
+              <img src="assets/imgs/images/TV/samsung-search.jpg" alt="عرض الشرح بالصور">
+              <div class="overlay-text">انقر هنا لمشاهدة الشرح بالصور</div>
+            </div>
+
+
+            <hr style="border:none;border-top:1px solid #eef2f7;margin:12px 0">
+
+            <ul style="margin:0;padding:0 18px;line-height:2;color:#0f172a">
+              <li style="font-weight:400">الطريقة الثانية: (رسوم إضافية)</li>
+              <li>1- افتح متجر التطبيقات APPS (إذا كانت أول مرة سيطلب منك عمل حساب جديد ضع ايميلك وكلمة سر خاصة بك).
+              </li>
+              <li>2- ابحث على تطبيق IBO ثم قم بتثبيته.</li>
+              <li>3- افتح التطبيق سيظهر لك رقم مميز Mac ID & Device Key قم بإرسالهم لنا لنقوم بتفعيل الاشتراك لديك
+                مباشرة.</li>
+              <li>* ملاحظة بعض الطرق قد لا تتوفر في بعض الموديلات.</li>
+            </ul>
+
+            <hr style="border:none;border-top:1px solid #eef2f7;margin:12px 0">
+
+            <!-- ✅ زر أو صورة مصغرة لفتح معرض صور -->
+            <div class="gallery-thumbnail" onclick="openGalleryModal(this)"
+              data-images='["assets/imgs/images/TV/samsung-search.jpg",
+                            "assets/imgs/images/TV/IBO-1.jpg",
+                            "assets/imgs/images/TV/IBO-2.jpg",
+                            "assets/imgs/images/TV/samsung-apps.jpg",
+                             "assets/imgs/images/TV/IBO-3.jpg",
+                             "assets/imgs/images/TV/IBO-4.jpg"]'>
+              <img src="assets/imgs/images/TV/samsung-search.jpg" alt="عرض الشرح بالصور">
+              <div class="overlay-text">انقر هنا لمشاهدة الشرح بالصور</div>
+            </div>
+
+            <hr style="border:none;border-top:1px solid #eef2f7;margin:12px 0">
+
+           <ul style="margin:0;padding:0 18px;line-height:2;color:#0f172a">
+              <li style="font-weight:600">- على تلفزيونات نظام VIDAA مثل ماركة TOSHIBA، HISENSE </li>
+              <li style="font-weight:400">الطريقة الأولى: (بدون رسوم إضافية)</li>
+              <li>1- افتح متجر التطبيقات (إذا كانت أول مرة سيطلب منك عمل حساب جديد ضع ايميلك وكلمة سر خاصة بك).</li>
+              <li>2- ابحث على تطبيق Iptv Smarters (انتبه ان يكون اسم المطور WHMCS Smarters).</li>
+              <li>3- قم بتثبيت التطبيق ثم افتح التطبيق سيظهر لك 4 خانات في الخانة الأول اكتب أي اسم تريده، في الخانة
+                الثانية اكتب اسم المستخدم، في الخانة الثالثة اكتب كلمة المرور، في الخانة الأخيرة اكتب رابط السيرفر
+                (البيانات يتم تزويدك بها من قبلنا عند الاشتراك او طلب تجربة مجانية).</li>
+            </ul>
+
+            <hr style="border:none;border-top:1px solid #eef2f7;margin:12px 0">
+
+            <!-- ✅ زر أو صورة مصغرة لفتح معرض صور -->
+            <div class="gallery-thumbnail" onclick="openGalleryModal(this)"
+              data-images='["assets/imgs/images/TV/iptv-smarters-1.jpg",
+                            "assets/imgs/images/TV/iptv-smarters-2.jpg",
+                             "assets/imgs/images/TV/iptv-smarters-3.jpg",
+                             "assets/imgs/images/TV/iptv-smarters-4.jpg"]'>
+              <img src="assets/imgs/images/TV/iptv-smarters-1.jpg" alt="عرض الشرح بالصور">
+              <div class="overlay-text">انقر هنا لمشاهدة الشرح بالصور</div>
+            </div>
+
+            <hr style="border:none;border-top:1px solid #eef2f7;margin:12px 0">
+
+            <ul style="margin:0;padding:0 18px;line-height:2;color:#0f172a">
+              <li style="font-weight:400">الطريقة الثانية: (رسوم إضافية)</li>
+              <li>1- افتح متجر التطبيقات (إذا كانت أول مرة سيطلب منك عمل حساب جديد ضع ايميلك وكلمة سر خاصة بك).</li>
+              <li>2- ابحث على تطبيق IBO أو تطبيق HOT أو تطبيق Smartone ثم قم بتثبيته.</li>
+              <li>3- افتح التطبيق سيظهر لك رقم مميز Mac ID & Device Key قم بإرسالهم لنا لنقوم بتفعيل الاشتراك لديك
+                مباشرة.</li>
+              <li>*ملاحظة بعض الطرق قد لا تتوفر في بعض الموديلات.</li>
+            </ul>
+
+            <hr style="border:none;border-top:1px solid #eef2f7;margin:12px 0">
+
+            <!-- ✅ زر أو صورة مصغرة لفتح معرض صور -->
+            <div class="gallery-thumbnail" onclick="openGalleryModal(this)"
+              data-images='["assets/imgs/images/TV/smartone-1.jpg",
+                            "assets/imgs/images/TV/smartone-2.jpg",
+                            "assets/imgs/images/TV/smartone-3.jpg",
+                            "assets/imgs/images/TV/hot-iptv-1.jpg",
+                            "assets/imgs/images/TV/hot-iptv-2.jpg"]'>
+              <img src="assets/imgs/images/TV/smartone-1.jpg" alt="عرض الشرح بالصور">
+              <div class="overlay-text">انقر هنا لمشاهدة الشرح بالصور</div>
+            </div>
+
+            <hr style="border:none;border-top:1px solid #eef2f7;margin:12px 0">
+
+            <ul style="margin:0;padding:0 18px;line-height:2;color:#0f172a">
+              <li style="font-weight:600">- على الأيفون أو الأيباد </li>
+              <li style="font-weight:400">الطريقة الأولى:</li>
+              <li>1- افتح متجر التطبيقات App Store .</li>
+              <li>2- ابحث على تطبيق Smarters Player Lite (انتبه ان يكون اسم المطور WHMCS Smarters).</li>
+              <li>3- قم بتثبيت التطبيق ثم افتح التطبيق سيظهر لك 4 خانات في الخانة الأول اكتب أي اسم تريده، في الخانة
+                الثانية اكتب اسم المستخدم، في الخانة الثالثة اكتب كلمة المرور، في الخانة الأخيرة اكتب رابط السيرفر
+                (البيانات يتم تزويدك بها من قبلنا عند الاشتراك او طلب تجربة مجانية).</li>
+            </ul>
+
+            <hr style="border:none;border-top:1px solid #eef2f7;margin:12px 0">
+
+            <!-- ✅ زر أو صورة مصغرة لفتح معرض صور -->
+            <div class="gallery-thumbnail" onclick="openGalleryModal(this)"
+            style="height: 220px;"
+              data-images='["assets/imgs/images/TV/smarters-player-lite-1.jpg",
+                            "assets/imgs/images/TV/smarters-player-lite-2.jpg",
+                             "assets/imgs/images/TV/smarters-player-lite-3.jpg",
+                             "assets/imgs/images/TV/smarters-player-lite-4.jpg",
+                             "assets/imgs/images/TV/smarters-player-lite-5.jpg"]'>
+              <img src="assets/imgs/images/TV/smarters-player-lite-1.jpg" alt="عرض الشرح بالصور">
+              <div class="overlay-text">انقر هنا لمشاهدة الشرح بالصور</div>
+            </div>
+
+            <hr style="border:none;border-top:1px solid #eef2f7;margin:12px 0">
+
+            <ul style="margin:0;padding:0 18px;line-height:2;color:#0f172a">
+              <li style="font-weight:400">الطريقة الثانية:</li>
+              <li>1- افتح متجر التطبيقات App Store .</li>
+              <li>2- ابحث على تطبيق 000 Player .</li>
+              <li>3- قم بتثبيت التطبيق ثم افتح التطبيق واكتب رقم المتجر 770 سيظهر لك 3 خانات في الخانة الأول اكتب أي اسم
+                تريده، في الخانة الثانية اكتب اسم المستخدم، في الخانة الثالثة اكتب كلمة المرور (البيانات يتم تزويدك بها
+                من قبلنا عند الاشتراك او طلب تجربة مجانية).</li>
+            </ul>
+
+            <hr style="border:none;border-top:1px solid #eef2f7;margin:12px 0">
+
+            <!-- ✅ زر أو صورة مصغرة لفتح معرض صور -->
+            <div class="gallery-thumbnail" onclick="openGalleryModal(this)"
+            style="height: 220px;"
+              data-images='["assets/imgs/images/TV/000-player-1.jpg",
+                            "assets/imgs/images/TV/000-player-2.jpg",
+                             "assets/imgs/images/TV/000-player-3.jpg"]'>
+              <img src="assets/imgs/images/TV/000-player-1.jpg" alt="عرض الشرح بالصور">
+              <div class="overlay-text">انقر هنا لمشاهدة الشرح بالصور</div>
+            </div>
+
+            <hr style="border:none;border-top:1px solid #eef2f7;margin:12px 0">
+
+            <ul style="margin:0;padding:0 18px;line-height:2;color:#0f172a">
+              <li style="font-weight:600">- على الكمبيوتر Windows</li>
+              <li style="font-weight:400">الطريقة الأولى:</li>
+              <li>1- قم بتعطيل الحماية Runtime Protection داخل Windows Security</li>
+              <li>
+                2-قم بتحميل تطبيق Sfvip من الرابط
+                <a href="https://github.com/austintools/SFVIP-Player/releases/download/v1.2.9.1/SFVIP-Player_x64.zip"
+                  target="_blank" style="color:#2563eb; text-decoration:none;">
+                  sfvip
+                </a>
+              </li>
+              <li>3-فك الضغط عن الملف وقم بفتح التطبيق </li>
+              <li>4- اضغط على إضافة مستخدم Add user  ثم user&pass</li>
+              <li>5- سيظهر لك 4 خانات في الخانة الأول اكتب أي اسم تريده، في الخانة الثانية اكتب رابط السيرفر ، في الخانة الثالثة اكتب اسم المستخدم ، في الخانة الأخيرة اكتب كلمة المرور (البيانات يتم تزويدك بها من قبلنا عند الاشتراك او طلب تجربة مجانية).</li>
+            </ul>
+
+            <hr style="border:none;border-top:1px solid #eef2f7;margin:12px 0">
+
+            <!-- ✅ زر أو صورة مصغرة لفتح معرض صور -->
+            <div class="gallery-thumbnail" onclick="openGalleryModal(this)"
+              data-images='["assets/imgs/images/TV/sfvip-1.png", 
+                            "assets/imgs/images/TV/sfvip-2.png",
+                             "assets/imgs/images/TV/sfvip-3.png",
+                             "assets/imgs/images/TV/sfvip-4.png"]'>
+              <img src="assets/imgs/images/TV/sfvip-1.png" alt="عرض الشرح بالصور">
+              <div class="overlay-text">انقر هنا لمشاهدة الشرح بالصور</div>
+            </div>
+
+            <hr style="border:none;border-top:1px solid #eef2f7;margin:12px 0">
+
+            <ul style="margin:0;padding:0 18px;line-height:2;color:#0f172a">
+              <li style="font-weight:400">الطريقة الثانية:</li>
+              <li>
+                1- حمل محاكي الاندرويد بلوستاك من الموقع
+                <a href="https://www.bluestacks.com"
+                  target="_blank" style="color:#2563eb; text-decoration:none;">
+                  بلوستاك
+                </a>
+              </li>
+              <li>2- افتح المتصفح واكتب الموقع التالي linktr.ee/drsat</li>
+              <li>3- سيظهر لديك متجرنا على منصة Linktree, حرك المؤشر للأسفل حتى تصل الى تطبيق AROMA قم بالضغط عليه ليبدأ تحميل التطبيق.</li>
+              <li>4- بعد تحميل التطبيق اضغط على install لتثبيت التطبيق داخل محاكي الأندرويد.</li>
+              <li>5- قم بإدخال اسم المستخدم وكلمة المرور التي قمنا بإرسالها لك.</li>
+            </ul>
+
+            <hr style="border:none;border-top:1px solid #eef2f7;margin:12px 0">
+
+            <!-- ✅ زر أو صورة مصغرة لفتح معرض صور -->
+            <div class="gallery-thumbnail" onclick="openGalleryModal(this)"
+              data-images='["assets/imgs/images/TV/bluestack-1.png",
+                            "assets/imgs/images/TV/bluestack-2.png",
+                            "assets/imgs/images/TV/aroma-1.png", 
+                            "assets/imgs/images/TV/aroma-1.png"]'>
+              <img src="assets/imgs/images/TV/bluestack-1.png" alt="عرض الشرح بالصور">
+              <div class="overlay-text">انقر هنا لمشاهدة الشرح بالصور</div>
+            </div>
+
+            <hr style="border:none;border-top:1px solid #eef2f7;margin:12px 0">
+
+
+
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+
+   <!-- باقي باقات التلفزيون -->
+<section style="background: #fff; padding: 40px 0;">
+  <div class="container" dir="rtl">
+    <h2 style="font-size: 24px; font-weight: 800; color: #111827; text-align: right; margin-bottom: 20px;">
+      باقات قد تعجبك
+    </h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: flex-start;">
+      
+      <!-- بطاقة اشتراك 8k -->
+      <div style="width: 125px; height:180px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+        <a href="8k.html" style="text-decoration: none; color: inherit;">
+          <img src="assets/imgs/images/TV/8k.png" alt="8k" style="width: 100%; height: auto;">
+          <div style="padding: 10px 14px; font-weight: 700; text-align: center; font-size: 16px;">باقة 8k</div>
+        </a>
+      </div>
+
+      <!-- بطاقة اشتراك Hydra -->
+      <div style="width: 125px; height:180px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+        <a href="Hydra.html" style="text-decoration: none; color: inherit;">
+          <img src="assets/imgs/images/TV/HYDRA.png" alt="Hydra" style="width: 100%; height: auto;">
+          <div style="padding: 10px 14px; font-weight: 700; text-align: center; font-size: 16px;">باقة Hydra</div>
+        </a>
+      </div>
+
+      <!-- بطاقة اشتراك DINO -->
+      <div style="width: 125px; height:180px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+        <a href="DINO.html" style="text-decoration: none; color: inherit;">
+          <img src="assets/imgs/images/TV/DINO.png" alt="DINO" style="width: 100%; height: auto;">
+          <div style="padding: 10px 14px; font-weight: 700; text-align: center; font-size: 16px;">باقة DINO</div>
+        </a>
+      </div>
+
+      <!-- بطاقة اشتراك FAMILY -->
+      <div style="width: 125px; height:180px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+        <a href="FAMILY.html" style="text-decoration: none; color: inherit;">
+          <img src="assets/imgs/images/TV/FAMILY.png" alt="FAMILY" style="width: 100%; height: auto;">
+          <div style="padding: 10px 14px; font-weight: 700; text-align: center; font-size: 16px;">باقة FAMILY</div>
+        </a>
+      </div>
+
+      <!-- بطاقة اشتراك LIONZ -->
+      <div style="width: 125px; height:180px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+        <a href="LIONZ.html" style="text-decoration: none; color: inherit;">
+          <img src="assets/imgs/images/TV/LIONZ.png" alt="LIONZ" style="width: 100%; height: auto;">
+          <div style="padding: 10px 14px; font-weight: 700; text-align: center; font-size: 16px;">باقة LIONZ</div>
+        </a>
+      </div>
+
+      <!-- بطاقة اشتراك NEO4K -->
+      <div style="width: 125px; height:180px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+        <a href="NEO4K.html" style="text-decoration: none; color: inherit;">
+          <img src="assets/imgs/images/TV/NEO4K.png" alt="NEO4K" style="width: 100%; height: auto;">
+          <div style="padding: 10px 14px; font-weight: 700; text-align: center; font-size: 16px;">باقة NEO4K</div>
+        </a>
+      </div>
+
+      <!-- بطاقة اشتراك NOVA -->
+      <div style="width: 125px; height:180px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+        <a href="NOVA.html" style="text-decoration: none; color: inherit;">
+          <img src="assets/imgs/images/TV/NOVA.png" alt="NOVA" style="width: 100%; height: auto;">
+          <div style="padding: 10px 14px; font-weight: 700; text-align: center; font-size: 16px;">باقة NOVA</div>
+        </a>
+      </div>
+
+      <!-- بطاقة اشتراك SHOWPLUS -->
+      <div style="width: 125px; height:180px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+        <a href="SHOWPLUS.html" style="text-decoration: none; color: inherit;">
+          <img src="assets/imgs/images/TV/SHOWPLUS.png" alt="SHOWPLUS" style="width: 100%; height: auto;">
+          <div style="padding: 10px 14px; font-weight: 700; text-align: center; font-size: 16px;">باقة SHOWPLUS</div>
+        </a>
+      </div>
+
+      <!-- بطاقة اشتراك XTV -->
+      <div style="width: 125px; height:180px; background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+        <a href="XTV.html" style="text-decoration: none; color: inherit;">
+          <img src="assets/imgs/images/TV/XTV.png" alt="XTV" style="width: 100%; height: auto;">
+          <div style="padding: 10px 14px; font-weight: 700; text-align: center; font-size: 16px;">باقة XTV</div>
+        </a>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+    <div class="copyright-wrap">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-4">
+            <div class="footer-logo">
+              <a href="index.html"><img src="assets/imgs/logo/logo.png" alt=""></a>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="copyright-text text-center text-md-end">
+              <p>Copyrighted by <a href="https://DRSAT.com" target="_blank">@DRSAT</a> - All Right Reserved</p>
+              <div class="footer-icons">
+  <a href="https://facebook.com/yourpage" target="_blank"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://instagram.com/yourpage" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+  <a href="https://wa.me/970598900377" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
+
+            </div>
+
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- ✅ نافذة واحدة لعرض الصور -->
+  <div id="galleryModal" class="gallery-modal">
+    <div class="gallery-content">
+      <span class="close-btn" onclick="closeGalleryModal()">&times;</span>
+      <div class="gallery-images" id="gallerySlidesContainer">
+        <!-- الصور تنضاف ديناميكياً -->
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+  </div>
+
+
+  <!-- JS -->
+  <script>
+  const durationButtons = document.querySelectorAll('.duration-btn');
+  const selectedPriceEl = document.getElementById('selectedPrice');
+  const qtyInput = document.getElementById('qtyInput');
+  const qtyPlus = document.getElementById('qtyPlus');
+  const qtyMinus = document.getElementById('qtyMinus');
+  const buyBtn = document.getElementById('buyBtn');
+
+  // قيم افتراضية
+  let selectedMonths = 3;
+  let selectedPrice = 15;
+
+  // دالة تحديث رابط الواتساب
+  function updateLink() {
+    const q = Math.max(1, parseInt(qtyInput.value || '1', 10));
+    const text = encodeURIComponent(`مرحبا، أريد شراء اشتراك AROMA لمدة ${selectedMonths} أشهر بكمية ${q}`);
+    buyBtn.href = `https://api.whatsapp.com/send/?phone=970598900377&text=${text}`;
+  }
+
+  // دالة تفعيل الزر
+  function setActive(btn) {
+    durationButtons.forEach(b => {
+      b.style.background = '#fff';
+      b.style.color = '#375cf8';
+    });
+    btn.style.background = '#375cf8';
+    btn.style.color = '#fff';
+  }
+
+  // لما يضغط المستخدم على زر مدة الاشتراك
+  durationButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      setActive(btn);
+      selectedMonths = parseInt(btn.getAttribute('data-months'), 10);
+      selectedPrice = parseFloat(btn.getAttribute('data-price'));
+      selectedPriceEl.textContent = `$${selectedPrice}`;
+      updateLink();
+    });
+  });
+
+  // أزرار الكمية
+  qtyPlus.addEventListener('click', () => {
+    qtyInput.value = Math.min(99, (parseInt(qtyInput.value, 10) || 1) + 1);
+    updateLink();
+  });
+
+  qtyMinus.addEventListener('click', () => {
+    qtyInput.value = Math.max(1, (parseInt(qtyInput.value, 10) || 1) - 1);
+    updateLink();
+  });
+
+  // تحديث الرابط أول مرة
+  updateLink();
+</script>
+
+
+  <script>
+    let currentSlide = 0;
+    let galleryImages = [];
+
+    function openGalleryModal(el) {
+  const images = JSON.parse(el.getAttribute('data-images'));
+  galleryImages = images;
+  currentSlide = 0;
+
+  const container = document.getElementById('gallerySlidesContainer');
+  container.innerHTML = ''; // حذف الصور القديمة
+
+  images.forEach((src, index) => {
+    const img = document.createElement('img');
+    img.src = src;
+    img.className = 'gallery-slide';
+    if (index === 0) img.classList.add('active');
+    container.appendChild(img);
+  });
+
+  // ✅ إظهار الأسهم دائماً عند فتح المعرض
+  document.querySelector(".prev").style.display = "block";
+  document.querySelector(".next").style.display = "block";
+
+  // ✅ عرض المودال
+  document.getElementById('galleryModal').style.display = 'block';
+
+  // ✅ عرض أول صورة وتحديث حالة الأسهم حسب عدد الصور
+  showSlide(currentSlide);
+}
+
+
+    function closeGalleryModal() {
+      document.getElementById('galleryModal').style.display = 'none';
+    }
+
+   function plusSlides(n) {
+  const slides = document.querySelectorAll('#gallerySlidesContainer .gallery-slide');
+  const totalSlides = slides.length;
+
+  const newSlide = currentSlide + n;
+
+  if (newSlide >= 0 && newSlide < totalSlides) {
+    currentSlide = newSlide;
+
+    slides.forEach((s, i) => {
+      s.classList.toggle('active', i === currentSlide);
+    });
+
+    // 🔽 إظهار/إخفاء الأسهم حسب رقم الصورة
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+
+    prevBtn.style.display = currentSlide === 0 ? 'none' : 'block';
+    nextBtn.style.display = currentSlide === totalSlides - 1 ? 'none' : 'block';
+  }
+}
+
+
+    window.onclick = function (event) {
+      const modal = document.getElementById("galleryModal");
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+  </script>
+
+
+
+
+  <!-- JS here -->
+  <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="assets/js/owl.carousel.min.js"></script>
+  <script src="assets/js/jquery.odometer.min.js"></script>
+  <script src="assets/js/jquery.appear.js"></script>
+  <script src="assets/js/jquery.flipster.min.js"></script>
+  <script src="assets/js/jquery-ui.min.js"></script>
+  <script src="assets/js/jquery.nice-select.min.js"></script>
+  <script src="assets/js/jarallax.min.js"></script>
+  <script src="assets/js/slick.min.js"></script>
+  <script src="assets/js/swiper.min.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
