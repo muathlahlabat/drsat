@@ -8522,7 +8522,7 @@ html, body {
 
 /* خلفية الصورة لكل الصفحة */
 body {
-  background: url('/Drsat25/assets/imgs/images/body2.jpg') 
+  background: url('/assets/imgs/images/body2.jpg') 
               center center fixed no-repeat !important;
   background-size: cover !important;
   background-attachment: fixed;
