@@ -341,29 +341,39 @@
     }
 
     .gallery-modal {
-      display: none;
-      position: fixed;
-      z-index: 9999;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-      padding-top: 70px;
-      direction: rtl;
-    }
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
 
-    .gallery-content {
+ /* محتوى المعرض */
+.gallery-content {
   position: relative;
   margin: auto;
   padding: 20px;
-  width: 80%;           /* ← زِد العرض ليملأ أغلب الشاشة */
-  max-width: 1200px;    /* ← اسمح بأكبر حجم ممكن */
+  width: 80%;
+  max-width: 1200px;
   background: white;
   border-radius: 8px;
   text-align: center;
 }
 
+/* عند فتح المودال */
+.gallery-modal.open {
+  display: flex !important;   /* يظهر المودال على كل الأجهزة */
+  visibility: visible !important;
+  opacity: 1 !important;
+}
 
    .gallery-slide {
   display: none;
@@ -473,6 +483,27 @@
 
 .footer-icons a:hover .fa-whatsapp {
   color: #25D366; /* أخضر واتساب */
+}
+
+/* الجوال فقط: نعدل حجم الصورة والمحتوى */
+@media (max-width: 768px) {
+  .gallery-content {
+    width: 95% !important;
+    max-width: none !important;
+    margin: 0 auto !important;
+    padding: 10px !important;
+    border-radius: 10px;
+  }
+
+  .gallery-slide {
+    max-height: 75vh !important;
+    object-fit: contain !important;
+  }
+
+  .prev, .next {
+    font-size: 22px !important;
+    padding: 8px !important;
+  }
 }
 
 
@@ -1145,8 +1176,8 @@
       <div class="gallery-images" id="gallerySlidesContainer">
         <!-- الصور تنضاف ديناميكياً -->
       </div>
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <a class="prev" onclick="plusSlides(-1)">&#10095;</a>
+      <a class="next" onclick="plusSlides(1)">&#10094;</a>
     </div>
   </div>
 
@@ -1209,10 +1240,10 @@
 
 
   <script>
-    let currentSlide = 0;
-    let galleryImages = [];
+   let currentSlide = 0;
+let galleryImages = [];
 
-    function openGalleryModal(el) {
+function openGalleryModal(el) {
   const images = JSON.parse(el.getAttribute('data-images'));
   galleryImages = images;
   currentSlide = 0;
@@ -1228,23 +1259,19 @@
     container.appendChild(img);
   });
 
-  // ✅ إظهار الأسهم دائماً عند فتح المعرض
-  document.querySelector(".prev").style.display = "block";
-  document.querySelector(".next").style.display = "block";
-
-  // ✅ عرض المودال
-  document.getElementById('galleryModal').style.display = 'block';
+  // ✅ إضافة كلاس "open" بدل تغيير display مباشرة
+  document.getElementById('galleryModal').classList.add('open');
 
   // ✅ عرض أول صورة وتحديث حالة الأسهم حسب عدد الصور
   showSlide(currentSlide);
 }
 
+function closeGalleryModal() {
+  const modal = document.getElementById('galleryModal');
+  modal.classList.remove('open'); // يخفي المودال
+}
 
-    function closeGalleryModal() {
-      document.getElementById('galleryModal').style.display = 'none';
-    }
-
-   function plusSlides(n) {
+function plusSlides(n) {
   const slides = document.querySelectorAll('#gallerySlidesContainer .gallery-slide');
   const totalSlides = slides.length;
 
@@ -1266,13 +1293,26 @@
   }
 }
 
+window.onclick = function (event) {
+  const modal = document.getElementById("galleryModal");
+  if (event.target == modal) {
+    closeGalleryModal();
+  }
+}
 
-    window.onclick = function (event) {
-      const modal = document.getElementById("galleryModal");
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
+// ✅ دالة لعرض الشريحة الحالية (تستخدم في openGalleryModal)
+function showSlide(index) {
+  const slides = document.querySelectorAll('#gallerySlidesContainer .gallery-slide');
+  slides.forEach((s, i) => {
+    s.classList.toggle('active', i === index);
+  });
+
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+
+  prevBtn.style.display = index === 0 ? 'none' : 'block';
+  nextBtn.style.display = index === slides.length - 1 ? 'none' : 'block';
+}
 
   </script>
 
