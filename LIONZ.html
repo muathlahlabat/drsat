@@ -18,7 +18,7 @@
   <!-- استدعاء Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <style>
+<style>
     body {
       height: 2000px;
       /* فقط لاختبار التمرير */
@@ -341,35 +341,47 @@
     }
 
     .gallery-modal {
-      display: none;
-      position: fixed;
-      z-index: 9999;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-      padding-top: 70px;
-      direction: rtl;
-    }
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+}
 
-    .gallery-content {
-      position: relative;
-      margin: auto;
-      padding: 20px;
-      width: 40%;
-      max-width: 700px;
-      background: white;
-      border-radius: 8px;
-      text-align: center;
-    }
+ /* محتوى المعرض */
+.gallery-content {
+  position: relative;
+  margin: auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 1200px;
+  background: white;
+  border-radius: 8px;
+  text-align: center;
+}
 
-    .gallery-slide {
-      display: none;
-      width: 100%;
-      height: 400px;
-      object-fit: contain;
-    }
+/* عند فتح المودال */
+.gallery-modal.open {
+  display: flex !important;   /* يظهر المودال على كل الأجهزة */
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+   .gallery-slide {
+  display: none;
+  width: 100%;
+  max-height: 80vh;   /* ← يجعل الصورة تملأ 80% من ارتفاع الشاشة */
+  object-fit: contain;
+}
+
 
     .gallery-slide.active {
       display: block;
@@ -473,7 +485,43 @@
   color: #25D366; /* أخضر واتساب */
 }
 
+/* الجوال فقط: نعدل حجم الصورة والمحتوى */
+@media (max-width: 768px) {
+  .gallery-content {
+    width: 95% !important;
+    max-width: none !important;
+    margin: 0 auto !important;
+    padding: 10px !important;
+    border-radius: 10px;
+  }
 
+  .gallery-slide {
+    max-height: 75vh !important;
+    object-fit: contain !important;
+  }
+
+  .prev, .next {
+    font-size: 22px !important;
+    padding: 8px !important;
+  }
+}
+
+.policy-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px; /* مسافة بين النص والأيقونة */
+  background:#f1f5f9;
+  padding:8px 12px;
+  border-radius:6px;
+  margin-left:6px;
+  text-decoration:none;
+  color:#111827;
+  font-weight:700;
+}
+.policy-btn i {
+  order: +1; /* يخلي الأيقونة قبل النص */
+}
   </style>
 
 
@@ -493,6 +541,19 @@
   <link rel="stylesheet" href="assets/css/slick.css">
   <link rel="stylesheet" href="assets/css/default.css">
   <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+.product-image {
+  transform: translateY(-160px) !important;
+  width: 80% !important;
+}
+
+@media (max-width: 768px) {
+  .product-image {
+    transform: translateY(5px) !important;
+    width: 70% !important;
+  }
+}
+</style>
 </head>
 
 <body>
@@ -594,7 +655,7 @@
           <div style="width: 55%; padding: 24px;" class="d-flex flex-column" dir="rtl">
             <h2 style="margin:0;font-size:28px;font-weight:800;color:#111827">اشتراك LIONZ المميز</h2>
             <p style="margin:14px 0 6px;color:#0f172a;line-height:1.9">
-              تواصل معنا لتجريب الخدمة مجاناً – السعر يشمل التفعيل على الشاشات – السعر لمدة 12 شهر
+              تواصل معنا لتجريب الخدمة مجاناً – السعر يشمل التفعيل على الشاشات 
             </p>
 
             <div class="separator"></div>
@@ -734,18 +795,16 @@
         </div>
       </div>
       <div style="background:#f8f9fa;padding:10px;border-radius:10px;text-align:center;">
-        <a href="javascript:void(0)" onclick="openModal('deliveryModal')"
-          style="background:#f1f5f9;padding:8px 12px;border-radius:6px;margin-left:6px;text-decoration:none;color:#111827;font-weight:700;">
-          <i class="fa-solid fa-shield-halved" style="margin-left:5px;"></i> سياسة التوصيل
-        </a>
-        <a href="javascript:void(0)" onclick="openModal('returnModal')"
-          style="background:#f1f5f9;padding:8px 12px;border-radius:6px;margin-left:6px;text-decoration:none;color:#111827;font-weight:700;">
-          <i class="fa-solid fa-shield-halved" style="margin-left:5px;"></i> سياسة التبديل
-        </a>
-        <a href="javascript:void(0)" onclick="openModal('cancelModal')"
-          style="background:#f1f5f9;padding:8px 12px;border-radius:6px;text-decoration:none;color:#111827;font-weight:700;">
-          <i class="fa-solid fa-shield-halved" style="margin-left:5px;"></i> سياسة الإلغاء
-        </a>
+              <a href="javascript:void(0)" onclick="openModal('cancelModal')" class="policy-btn">
+  <i class="fa-solid fa-shield-halved"></i> سياسة الإلغاء
+</a>
+<a href="javascript:void(0)" onclick="openModal('returnModal')" class="policy-btn">
+  <i class="fa-solid fa-shield-halved"></i> سياسة التبديل
+</a>
+
+<a href="javascript:void(0)" onclick="openModal('deliveryModal')" class="policy-btn">
+  <i class="fa-solid fa-shield-halved"></i> سياسة التوصيل
+</a>
       </div>
 
       <!-- Modal Template -->
@@ -1319,8 +1378,8 @@
       <div class="gallery-images" id="gallerySlidesContainer">
         <!-- الصور تنضاف ديناميكياً -->
       </div>
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      <a class="prev" onclick="plusSlides(-1)">&#10095;</a>
+      <a class="next" onclick="plusSlides(1)">&#10094;</a>
     </div>
   </div>
 
@@ -1335,13 +1394,13 @@
   const buyBtn = document.getElementById('buyBtn');
 
   // قيم افتراضية
-  let selectedMonths = 6;
-  let selectedPrice = 25;
+  let selectedMonths = "سنة";
+  let selectedPrice = 6;
 
   // دالة تحديث رابط الواتساب
   function updateLink() {
     const q = Math.max(1, parseInt(qtyInput.value || '1', 10));
-    const text = encodeURIComponent(`مرحبا، أريد شراء اشتراك LIONZ لمدة ${selectedMonths} أشهر بكمية ${q}`);
+    const text = encodeURIComponent(`مرحبا، أريد شراء مشغل تفعيل Vodexplayer لمدة ${selectedMonths} أشهر بكمية ${q}`);
     buyBtn.href = `https://api.whatsapp.com/send/?phone=970598900377&text=${text}`;
   }
 
@@ -1383,10 +1442,10 @@
 
 
   <script>
-    let currentSlide = 0;
-    let galleryImages = [];
+   let currentSlide = 0;
+let galleryImages = [];
 
-    function openGalleryModal(el) {
+function openGalleryModal(el) {
   const images = JSON.parse(el.getAttribute('data-images'));
   galleryImages = images;
   currentSlide = 0;
@@ -1402,23 +1461,19 @@
     container.appendChild(img);
   });
 
-  // ✅ إظهار الأسهم دائماً عند فتح المعرض
-  document.querySelector(".prev").style.display = "block";
-  document.querySelector(".next").style.display = "block";
-
-  // ✅ عرض المودال
-  document.getElementById('galleryModal').style.display = 'block';
+  // ✅ إضافة كلاس "open" بدل تغيير display مباشرة
+  document.getElementById('galleryModal').classList.add('open');
 
   // ✅ عرض أول صورة وتحديث حالة الأسهم حسب عدد الصور
   showSlide(currentSlide);
 }
 
+function closeGalleryModal() {
+  const modal = document.getElementById('galleryModal');
+  modal.classList.remove('open'); // يخفي المودال
+}
 
-    function closeGalleryModal() {
-      document.getElementById('galleryModal').style.display = 'none';
-    }
-
-   function plusSlides(n) {
+function plusSlides(n) {
   const slides = document.querySelectorAll('#gallerySlidesContainer .gallery-slide');
   const totalSlides = slides.length;
 
@@ -1440,17 +1495,31 @@
   }
 }
 
+window.onclick = function (event) {
+  const modal = document.getElementById("galleryModal");
+  if (event.target == modal) {
+    closeGalleryModal();
+  }
+}
 
-    window.onclick = function (event) {
-      const modal = document.getElementById("galleryModal");
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
+// ✅ دالة لعرض الشريحة الحالية (تستخدم في openGalleryModal)
+function showSlide(index) {
+  const slides = document.querySelectorAll('#gallerySlidesContainer .gallery-slide');
+  slides.forEach((s, i) => {
+    s.classList.toggle('active', i === index);
+  });
+
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+
+  prevBtn.style.display = index === 0 ? 'none' : 'block';
+  nextBtn.style.display = index === slides.length - 1 ? 'none' : 'block';
+}
 
   </script>
 
-    <script>
+    
+<script>
 
      const t=document.getElementById('logos'), box=t.parentElement;
 while(t.scrollWidth < box.clientWidth*2) t.innerHTML += t.innerHTML;
@@ -1465,30 +1534,49 @@ while(t.scrollWidth < box.clientWidth*2) t.innerHTML += t.innerHTML;
       }
     });
 
-    // عرض / إغلاق المودال
-    function openModal(id) {
-      document.getElementById(id).style.display = "block";
-    }
-
-    function closeModal(id) {
-      document.getElementById(id).style.display = "none";
-    }
-
-    // إغلاق المودال عند الضغط بالخارج
-    window.onclick = function (event) {
-      const modals = document.querySelectorAll('.policy-modal');
-      modals.forEach(modal => {
-        if (event.target === modal) {
-          modal.style.display = "none";
-        }
-      });
-    }
-
     // القائمة الجانبية للجوال
     function toggleMobileMenu() {
       document.body.classList.toggle('mobile-menu-visible');
     }
     </script>
+	
+ <script>
+  // فتح أي نافذة
+  function openModal(id) {
+    document.getElementById(id).style.display = "block";
+  }
+
+  // إغلاق أي نافذة
+  function closeModal(id) {
+    document.getElementById(id).style.display = "none";
+  }
+
+  // إغلاق عند الضغط بالخارج
+  window.addEventListener("click", function(event) {
+    // 1) إغلاق مودالات السياسات
+    document.querySelectorAll(".policy-modal").forEach(modal => {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+
+    // 2) إغلاق معرض الصور
+    const galleryModal = document.getElementById("galleryModal");
+    if (event.target === galleryModal) {
+      galleryModal.style.display = "none";
+    }
+  });
+
+  // إغلاق عند زر Esc
+  window.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+      document.querySelectorAll(".policy-modal").forEach(modal => {
+        modal.style.display = "none";
+      });
+      document.getElementById("galleryModal").style.display = "none";
+    }
+  });
+</script>
 
 
   <!-- JS here -->

@@ -40,7 +40,28 @@
     }
 
 @media (max-width: 768px) {
+.pricing-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  direction: rtl;      /* يخلي الأيقونة يمين والنص يسار */
+  text-align: right;
+}
 
+.pricing-list li {
+  display: flex;
+  align-items: center;
+  gap: 2px;            /* فراغ صغير جداً بين الأيقونة والنص */
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.pricing-list li img {
+  width: 18px;
+  height: auto;
+  margin-left: 0;      /* يمنع أي فراغ إضافي */
+  margin-right: 0;     /* يمنع أي فراغ إضافي */
+}
     .mobile-menu .nav-logo {
         display: flex;
         justify-content: center;
