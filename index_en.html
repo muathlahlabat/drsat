@@ -4,474 +4,617 @@
 
 <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-974740070"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'AW-974740070');
-    </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-974740070"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-974740070');
+</script>
+
+  <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/favicon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+
+
+  <!-- استدعاء Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="متجر دكتورسات لاشتراكات التلفزيونات التفاعلية IPTV - أفضل القنوات والأفلام والمسلسلات">
+  <meta name="keywords" content="اشتراك IPTV, اشتراك AROMA, باقات تلفزيون, قنوات رياضية, IPTV فلسطين, IPTV">
+  <meta name="author" content="DRSAT IPTV">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>RK IPTV - TV Channel Subscriptions</title>
-    <meta name="description" content="RK IPTV – Stream 4K channels, movies, sports and more.">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DRSAT - متجر دكتورسات </title>
+    <meta name="description" content="">
 
     <link rel="shortcut icon" type="image/x-icon" href="assets/imgs/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/fontawesome-pro.css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/jquery.flipster.css">
-    <link rel="stylesheet" href="assets/css/jquery-ui.css">
-    <link rel="stylesheet" href="assets/css/nice-select.css">
-    <link rel="stylesheet" href="assets/css/flaticon.css">
-    <link rel="stylesheet" href="assets/css/odometer.css">
-    <link rel="stylesheet" href="assets/css/swiper.min.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/default.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- استدعاء Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      height: 2000px; /* بس عشان تجرب التمرير */
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      width: 60px;
+      height: 60px;
+      background-color: #25d366;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      z-index: 10000;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.3);
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+     transform: scale(1.1); /* يكبر شوي لما تمر الماوس */
+  color: white; /* يضل أبيض */
+  background-color: #20b954;
+    }
+
+    .text-column {
+  text-align: right;       /* يخلي النص يبدأ من اليمين */
+  direction: rtl;          /* اتجاه الكتابة من اليمين لليسار */
+  padding-right: 0 !important; /* يزيل أي padding داخلي */
+  margin-right: 0 !important;  /* يزيل أي margin خارجي */
+}
+
+
+ .footer-icons {
+  margin-top: 15px;
+  text-align: right;
+}
+
+.footer-icons a {
+  color: white;
+  font-size: 30px;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* تأثير hover بلون الشعار */
+.footer-icons a:hover .fa-facebook-f {
+  color: #1877F2; /* أزرق فيسبوك */
+}
+
+.footer-icons a:hover .fa-tiktok {
+  color: #000; /* وردي إنستغرام */
+}
+
+.footer-icons a:hover .fa-whatsapp {
+  color: #25D366; /* أخضر واتساب */
+}
+
+ @media (min-width: 769px) {
+      #mobileMenu .menu-logo {
+        display: none !important;
+      }
+
+    }
+
+    .top-info ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: flex-end;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .top-info li {
+      font-size: 14px;
+      color: #374151;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* ✅ زر القائمة (الهامبرغر) */
+    .mobile-menu-toggle {
+      display: none;
+      ;
+      top: -20px;
+    }
+
+     .separator {
+      height: 1px;
+      background-color: lightgray;
+      margin: 2px 0;
+      width: 100%;
+    }
+
+    /* ✅ تنسيق شاشة الموبايل */
+    @media (max-width: 768px) {
+      .product-columns {
+        flex-direction: column-reverse !important;
+      }
+
+      .mobile-menu .nav-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+      }
+
+      .mobile-menu .nav-logo img {
+        max-width: 120px;
+        height: auto;
+      }
+
+      .logo img {
+        max-width: 80px !important;
+        height: auto;
+      }
+
+      .logo {
+        order: 1;
+        margin-top: -40px !important;
+        padding-top: 0 !important;
+      }
+
+      .menu-wrap {
+        margin-top: 40px !important;
+        padding-top: 0 !important;
+      }
+
+      .menu-nav {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+      }
+
+      .menu-logo img {
+        margin-bottom: 10px;
+      }
+
+      /* ✅ زر القائمة (هامبرغر) يظهر فقط بالموبايل */
+      .mobile-menu-toggle {
+        display: inline-block;
+        position: relative;
+        background: none;
+        border: none;
+        font-size: 26px !important;
+        color: #111827;
+        cursor: pointer;
+        z-index: 1000;
+        padding: 5px;
+        margin-left: 10px;
+      }
+
+      .top-info ul {
+        flex-direction: column !important;
+        align-items: flex-end !important;
+        gap: 6px !important;
+        text-align: right;
+        margin-top: 10px;
+      }
+
+      .top-info li {
+        font-size: 13px !important;
+      }
+
+      .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+      }
+
+      h2 {
+        font-size: 22px !important;
+      }
+
+      .modal-content {
+        width: 90% !important;
+        margin: 20px auto !important;
+        padding: 15px !important;
+      }
+
+      .modal-content h3 {
+        font-size: 16px !important;
+      }
+
+      .modal-content ul li {
+        font-size: 14px !important;
+      }
+
+      .duration-btn {
+        font-size: 14px !important;
+        padding: 8px 12px !important;
+      }
+
+      #buyBtn {
+        font-size: 14px !important;
+        padding: 10px 12px !important;
+      }
+
+      .separator {
+        margin: 14px 0 !important;
+      }
+
+      .product-image {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .section-space>.container>div>div>div {
+        width: 100% !important;
+      }
+
+      .banner-area {
+  position: relative;
+  padding-top: 120px; /* أخلي الباكجراوند تطلع لفوق */
+  padding-bottom: 100px; /* مساحة لتحت عشان الصورة تدخل */
+  background-size: cover;
+  background-position: top center;
+  z-index: 1;
+  overflow: hidden;
+}
+
+
+      .banner-area .row {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .banner-img img {
+  margin-top: 30px; /* يخلي الصورة تنزل شوي */
+  max-width: 100%;
+  margin-bottom: -20px;
+  height: auto;
+}
+
+.footer-icons {
+  margin-top: 15px;
+  text-align: center !important;
+}
+
+.footer-icons a {
+  color: white;
+  font-size: 30px;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* تأثير hover بلون الشعار */
+.footer-icons a:hover .fa-facebook-f {
+  color: #1877F2; /* أزرق فيسبوك */
+}
+
+.footer-icons a:hover .fa-tiktok {
+  color: #000; /* وردي إنستغرام */
+}
+
+.footer-icons a:hover .fa-whatsapp {
+  color: #25D366; /* أخضر واتساب */
+}
+
+    }
+
+    .top-info ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: flex-end;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      direction: rtl;
+      text-align: right;
+    }
+
+    .top-info li {
+      display: flex;
+      flex-direction: row-reverse;
+      /* ✅ يعكس الأيقونة والنص */
+      align-items: center;
+      gap: 5px;
+      font-size: 14px;
+      color: #374151;
+      text-align: right;
+      /* ✅ يجبر النص يلتزم اليمين */
+      direction: rtl;
+      /* ✅ يتأكد أن كل شيء من اليمين */
+    }
+
+
+
+@keyframes slide{
+    from{
+        transform:translateX(0)
+    }
+    to{
+        transform:translateX(-50%)
+    }
+}
+
+
+
+  </style>
+
+
+    <!-- CSS here -->
+       <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/animate.min.css">
+        <link rel="stylesheet" href="assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="assets/css/jquery.flipster.css">
+        <link rel="stylesheet" href="assets/css/jquery-ui.css">
+        <link rel="stylesheet" href="assets/css/nice-select.css">
+        <link rel="stylesheet" href="assets/css/flaticon.css">
+        <link rel="stylesheet" href="assets/css/odometer.css">
+        <link rel="stylesheet" href="assets/css/swiper.min.css">
+        <link rel="stylesheet" href="assets/css/slick.css">
+        <link rel="stylesheet" href="assets/css/default.css">
+        <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
-<!-- Scroll to top -->
-<button class="scroll-top scroll-to-target" data-target="html">
-    <i class="fas fa-angle-up"></i>
-</button>
+<!-- زر واتساب -->
+  <a href="https://wa.me/970598900377" target="_blank" class="whatsapp-float">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
 
-<!-- Header -->
-<header>
-    <div class="header-top-wrap">
-        <div class="container" style="text-align: left;">
-            <div class="row">
-                <div class="col-xl-8 col-md-7 col-sm-7">
-                    <div class="header-top-left">
-                        <ul>
-                            <li class="d-none d-xl-flex"><i class="flaticon-location"></i> <a>Jerusalem, Palestine</a></li>
-                            <li class="d-none d-lg-flex"><i class="flaticon-email"></i>
-                                <a target="_blank" href="https://wa.me/970599611647" dir="ltr">+970 599611647</a>
-                            </li>
-                            <li><i class="flaticon-clock"></i> Working Hours: 8:30 AM - 8:00 PM</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-5 col-sm-5">
-                    <div class="header-top-right"></div>
-                </div>
-            </div>
-        </div>
+     <!-- Header -->
+  <header>
+
+    <div class="col-xl-4 col-md-5 col-sm-5">
+      <div class="header-top-right"></div>
+    </div>
+    </div>
+    </div>
     </div>
 
     <div id="sticky-header" class="menu-area">
-        <div class="container" style="text-align: left;">
-            <div class="row">
-                <div class="col-12">
-                    <div class="mobile-nav-toggler"><i class="fas fa-bars"></i></div>
-                    <div class="menu-wrap">
-                        <nav class="menu-nav">
-                            <div class="logo">
-                                <a href="index_en.html"><img src="assets/imgs/logo/logo.png" alt=""></a>
-                            </div>
-                            <div class="navbar-wrap main-menu d-none d-lg-flex">
-                                <ul class="navigation">
-                                    <li class="active menu-item"><a href="index_en.html">Home</a></li>
-                                    <li><a href="sort_en.html">Sort Packages</a></li>
-                                    <li><a href="https://rkiptv.com/search/">Search Library Content</a></li>
-                                    <li><a href="http://player.rkiptv.com/index_en.html">Web Player</a></li>
-                                    <li><a href="https://rkiptv.com/">العربية</a></li>
-                                </ul>
-                            </div>
-                            <div class="header-action d-none d-md-block">
-                                <ul>
-                                    <li class="header-btn">
-                                        <a href="https://api.whatsapp.com/send/?phone=970599611647&text=Hello, can I get a free trial?"
-                                           class="btn transparent-btn" target="_blank">Request a Trial</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </nav>
-                    </div>
-                    <!-- Mobile Menu -->
-                    <div class="mobile-menu">
-                        <nav class="menu-box">
-                            <div class="close-btn"><i class="fal fa-times"></i></div>
-                            <div class="nav-logo"><a href="index_en.html"><img src="assets/imgs/logo/logo.png" alt="" title=""></a></div>
-                            <div class="menu-outer"></div>
-                        </nav>
-                    </div>
-                    <div class="menu-backdrop"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
- <main>
-<!-- Banner -->
-<section class="banner-area banner-bg" data-background="assets/imgs/slider/banner_bg.jpg">
-    <div class="container">
+      <div class="container" style="direction: rtl; text-align: right;">
         <div class="row">
-            <div class="col-xl-5 col-lg-6 col-md-9">
-                <div class="banner-content" style="text-align: left;">
-                    <h2 class="title wow fadeInUp" data-wow-delay=".2s">Comprehensive RK IPTV Subscriptions</h2>
-                    <p class="wow fadeInUp" data-wow-delay=".4s">
-                        Enjoy ultra-HD streaming up to 4K, on any device, anywhere, anytime. Over 11,000 live channels and 80,000+ VOD items, with 99% uptime and zero interruptions.
-                    </p>
-                    <div class="banner-price wow fadeInUp" data-wow-delay=".6s">
-                        <h3 class="price">Only 25$<sub> / 6 Months</sub></h3>
-                    </div>
-                    <a href="/prices_en.html"
-                       class="btn wow fadeInUp"
-                       data-wow-delay=".8s"
-                       target="_blank"
-                       rel="noopener noreferrer">Join Now</a>
+          <div class="col-12">
+            <div class="menu-wrap">
+              <nav class="menu-nav">
+
+
+                <!-- زر الهامبرغر -->
+                <button class="mobile-menu-toggle d-lg-none" onclick="toggleMobileMenu()">
+                  <i class="fa fa-bars"></i>
+                </button>
+
+
+                <div class="logo">
+                  <a href="index.html"><img src="assets/imgs/logo/logo.png" alt=""></a>
                 </div>
+                
+
+                <div class="navbar-wrap main-menu d-none d-lg-flex">
+                  <ul class="navigation">
+                    <li><a href="index.html"class="btn-menu wow fadeInUp" data-wow-delay=".8s" target="_blank" rel="noopener noreferrer">الرئيسية</a></li>
+					<li><a href="tv-packages.html" class="btn-menu wow fadeInUp" data-wow-delay=".8s" target="_blank" rel="noopener noreferrer">باقات التلفزيون</a></li>
+                    <li><a href="receiver-packages.html"class="btn-menu wow fadeInUp" data-wow-delay=".8s" target="_blank" rel="noopener noreferrer">باقات الرسيفر</a></li>
+                    <li><a href="Paid-Players.html"class="btn-menu wow fadeInUp" data-wow-delay=".8s" target="_blank" rel="noopener noreferrer">تطبيقات مشغلات مدفوعة</a></li>
+					<li><a href="https://linktr.ee/drsat"class="btn-menu wow fadeInUp" data-wow-delay=".8s" target="_blank" rel="noopener noreferrer">متجر تطبيقات الأندرويد</a></li>
+                  <li class="header-btn">
+                    <a target="_blank"href="https://api.whatsapp.com/send/?phone=970598900377&text=مرحبا, أريد الاشتراك معكم" class="btn transparent-btn"> اطلب تجربة </a></li>
+					 </ul>
+                </div>
+
             </div>
-        </div>
-    </div>
-    <div class="banner-phone">
-        <div class="icon"><i class="fal fa-mobile-android"></i></div>
-        <div class="content">
-            <span>Contact Us</span>
-            <h5 class="number"><a target="_blank" href="https://wa.me/970599611647">+970 599611647</a></h5>
-        </div>
-    </div>
-</section>
-<!-- pricing-area -->
-<section class="pricing-area section-space">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-xl-5 col-lg-6 col-md-8">
-                <div class="section-title text-center mb-50">
-                    <h3 class="title">Best Packages at the Best Prices – Discover Now!</h3>
+            <!-- Mobile Menu  -->
+            <div class="mobile-menu">
+              <nav class="menu-box">
+                <div class="nav-logo"><a href="index.html"><img src="assets/imgs/logo/logo.png" alt="" title=""></a>
                 </div>
+                <div class="menu-outer">
+                  <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+                </div>
+                <!-- <div class="social-links">
+                                    <ul class="clearfix">
+                                        <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                                        <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                                        <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
+                                        <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                                        <li><a href="#"><span class="fab fa-youtube"></span></a></li>
+                                    </ul>
+                                </div>-->
+              </nav>
             </div>
+            <div class="menu-backdrop"></div>
+            <!-- End Mobile Menu -->
+          </div>
+
+
+
+          </nav>
         </div>
-        <div class="pricing-plan-wrap">
-            <div class="row">
-                <!-- RK Standard -->
-                <!--<div class="col-lg-4 col-md-6 col-sm-9">
-                    <div class="pricing-item mb-30">
-                        <div><img src="assets/imgs/images/RK_standard.png" alt=""></div>
-                        <div class="pricing-content">
-                            <ul class="pricing-list">
-                                <h3 class="title text-center">RK Standard</h3><br>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> Subscription Duration: 3 or 6 months</li>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> HD and 4K Quality</li>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> Over 9,000 Channels</li>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> Over 29,000 VOD (Movies & Series)</li>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> Sports Channels</li>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> Free Trial Available</li>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> Reseller Plans Available</li>
-                            </ul>
-                            <div class="price-wrap"><br><br>
-                                <h3 class="price">20$<sub> / 6 Months</sub></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>-->
+      </div>
+    </div>
 
-                <!-- RK Premium -->
-                <div class="col-lg-3 col-md-6 col-sm-9">
-                    <div class="pricing-item mb-30">
-                        <div><img src="assets/imgs/images/RK_premium.png" alt=""></div>
-                        <div class="pricing-content">
-                            <ul class="pricing-list">
-                                <h3 class="title text-center">RK Premium</h3>
-                                <h4 class="title text-center">+ RK Plus</h4><br>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> Subscription Duration: 3 or 6 months</li>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> HD and 4K Quality</li>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> Over 11,000 Channels</li>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> Over 76,000 VOD (Movies & Series)</li>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> Sports Channels</li>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> Free Trial Available</li>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> Reseller Plans Available</li>
-                            </ul>
-                            <div class="price-wrap">
-                                <h3 class="price">25$<sub> / 6 Months</sub></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    
+  </header>
+    <!-- header-area-end -->
 
-                <!-- RK Max -->
-                <div class="col-lg-3 col-md-6 col-sm-9">
-                    <div class="pricing-item mb-30">
-                        <div><img src="assets/imgs/images/RK_max.png" alt=""></div>
-                        <div class="pricing-content">
-                            <ul class="pricing-list">
-                                <h3 class="title text-center">RK Max</h3>
-                                <h4 class="title text-center">+ RK Premium</h4><br>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> Subscription Duration: 3 or 6 months</li>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> HD and 4K Quality</li>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> Over 11,000 Channels</li>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> Over 76,000 VOD (Movies & Series)</li>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> Sports Channels</li>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> Free Trial Available</li>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> Reseller Plans Available</li>
-                            </ul>
-                            <div class="price-wrap">
-                                <h3 class="price">28$<sub> / 6 Months</sub></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- RK Ultra -->
-                <div class="col-lg-3 col-md-6 col-sm-9">
-                    <div class="pricing-item mb-30">
-                        <div><img src="assets/imgs/images/RK_ultra.png" alt=""></div>
-                        <div class="pricing-content">
-                            <ul class="pricing-list">
-                                <h3 class="title text-center">RK Ultra</h3>
-                                <h4 class="title text-center">+ RK Plus</h4><br>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> Subscription Duration: 3 or 6 months</li>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> HD and 4K Quality</li>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> Over 31,000 Channels</li>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> Over 134,000 VOD (Movies & Series)</li>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> Sports Channels</li>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> Free Trial Available</li>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> Reseller Plans Available</li>
-                            </ul>
-                            <div class="price-wrap">
-                                <h3 class="price">30$<sub> / 6 Months</sub></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- main-area -->
+    <main>
 
-                <!-- RK Ultra Plus -->
-                <div class="col-lg-3 col-md-6 col-sm-9">
-                    <div class="pricing-item mb-30">
-                        <div><img src="assets/imgs/images/RK_ultraplus.png" alt=""></div>
-                        <div class="pricing-content">
-                            <ul class="pricing-list">
-                                <h3 class="title text-center">RK Ultra Plus</h3>
-                                <h4 class="title text-center">+ RK Max</h4><br>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> Subscription Duration: 3 or 6 months</li>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> HD and 4K Quality</li>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> Over 31,000 Channels</li>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> Over 134,000 VOD (Movies & Series)</li>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> Sports Channels</li>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> Free Trial Available</li>
-                                <li><img src="assets/imgs/icons/check.png" alt=""> Reseller Plans Available</li>
-                            </ul>
-                            <div class="price-wrap">
-                                <h3 class="price">35$<sub> / 6 Months</sub></h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- ✅ صورة للموبايل فقط -->
+<div class="mobile-banner-img d-block d-md-none text-center">
+  <img src="assets/imgs/slider/DRSAT1.png" alt="" style="width: 90%; max-width: 400px; margin: 0px auto; margin-top:-90px;">
+</div>
 
-            </div> <!-- end row -->
-        </div> <!-- end pricing-plan-wrap -->
-    </div> <!-- end container -->
+
+        <!-- banner-area -->
+        <section class="banner-area banner-bg" data-background="assets/imgs/bg/subscribe_bg.jpg">
+  <div class="container">
+    <div class="row align-items-center">
+      
+     <!-- النص ثانياً (يصير على اليسار بالشاشات الكبيرة) -->
+      <div class="col-xl-6 col-lg-6 col-md-6 order-1 order-md-2" style="text-align: right; direction: rtl;">
+        <div class="banner-content">
+          <h2 class="title wow fadeInUp" data-wow-delay=".2s" style="font-size:57px"> اشتراكات دكتورسات العالمية والمميزة</h2>
+          <p class="wow fadeInUp" data-wow-delay=".4s">
+            تمتّع بمشاهدة محتوى مذهل بدقّة تصل حتى 4K، متاح في أي وقت ومن أي مكان، وعلى مختلف أجهزتك. نقدّم لك اشتراك IPTV يضم أكثر من 30,000 قناة مباشرة وأكثر من 100,000 فيلم ومسلسل (VOD)، مع استقرار رهيب يضمن لك توفّر الخدمة بنسبة تصل إلى 99% دون انقطاع.
+          </p>
+          <div class="banner-price wow fadeInUp" data-wow-delay=".6s">
+            <h3 class="price">ابتداء من 20$ <sub>/ 12 شهر</sub></h3>
+          </div>
+          <a target="_blank"
+                      href="https://api.whatsapp.com/send/?phone=970598900377&text=مرحبا, أريد الاشتراك معكم"
+                      class="btn wow fadeInUp" data-wow-delay=".8s">
+                    انضم الآن
+                    </a>
+        </div>
+      </div>
+
+      <!-- الصورة أولاً (تصير على اليمين بالشاشات الكبيرة) -->
+      
+
+
+      <div class="col-xl-6 col-lg-6 col-md-6 order-2 order-md-1">
+  <div class="banner-img text-center d-none d-md-block">
+    <img src="assets/imgs/slider/DRSAT1.png" alt="" style=" width: 670px;">
+  </div>
+</div>
+
+    </div>
+  </div>
 </section>
-<!-- pricing-area-end -->
-<!-- video-area -->
-<section class="video-area video-bg" data-background="assets/imgs/bg/video_bg.jpg">
-    <div class="container">
-        <div class="row justify-content-between align-items-center">
-            <div class="col-lg-4"></div>
-            <div class="col-xl-6 col-lg-7">
-                <div class="section-title mb-40">
-                    <h2 class="title">Channels Network Covering 115 Countries</h2>
+
+
+        <!-- banner-area-end -->
+
+        <!-- pricing-area -->
+        <section class="pricing-area section-space">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-5 col-lg-6 col-md-8">
+                        <div class="section-title text-center mb-50">
+                            <h2 class="title" style="direction: rtl;">أفضل الباقات بأفضل الأسعار – اكتشفها الآن!</h2>
+                        </div>
+                    </div>
                 </div>
-                <div class="video-content-wrap">
-                    <p>We offer all resolutions to match your internet speed, allowing IPTV streaming from any device: mobile, Smart TV, Android Box, or PC.</p>
-                    <div class="fact-wrap">
-                        <div class="row">
-                            <div class="col-md-4 col-sm-6">
-                                <div class="fact-item">
-                                    <h4 class="title"><span class="odometer" data-count="4"></span>K</h4>
-                                    <p>Ultra HD Streaming</p>
+                <div class="pricing-plan-wrap" style="direction: rtl;">
+                    <div class="row">
+                        
+                        <div class="col-lg-3 col-md-6 col-sm-9">
+                            <div class="pricing-item mb-30">
+                                <div>
+                                    <img src="assets/imgs/images/TV/8K.png" alt="8K">
+
                                 </div>
-                            </div>
-                            <div class="col-md-4 col-sm-6">
-                                <div class="fact-item">
-                                    <h4 class="title"><span class="odometer" data-count="30000"></span>+</h4>
-                                    <p>Online TV Channels</p>
+                                <div class="pricing-content">
+                                    <ul class="pricing-list">
+                                        <h3 class="title" style="direction: ltr; text-align: center; font-family: var(--bd-ff-body); color: #375cf8 !important;">8K</h3>
+                                        <br>
+                                        <li><img src="assets/imgs/icons/check.png" alt=""> جودة مشاهدة فائقة: FHD و 4K</li>
+                                <li><img src="assets/imgs/icons/check.png" alt=""> أكثر من 38,000 قناة</li>
+                                <li><img src="assets/imgs/icons/check.png" alt=""> أكثر من 170,000 فيلم ومسلسل (VOD)</li>
+                                <li><img src="assets/imgs/icons/check.png" alt=""> مصادر متعددة لقنوات الرياضة</li>
+                                <li><img src="assets/imgs/icons/check.png" alt=""> متاح تجربة مجانية </li>
+                                <li><img src="assets/imgs/icons/check.png" alt=""> متاح لوحات موزعين</li>
+                                    </ul>
+                                    <div class="price-wrap">
+                                        <a href="8k.html" class="btn btn-primary">تفاصيل الاشتراك</a>
+                                    </div>
+
+                                    <!--<div class="pricing-btn">
+                                        <a href="pricing.html" class="btn btn-link">View Plans</a>
+                                    </div>-->
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <a target="_blank" href="/prices_en.html" class="btn">Subscribe Now</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- special-offer-area -->
-<section class="special-offer-area section-space-top section-meadium-bottom">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 order-0 order-lg-2">
-                <div class="special-offer-img wow fadeInRight" data-wow-delay=".2s">
-                    <img src="assets/imgs/images/special_offer_img.jpg" alt="">
-                    <div class="special-offer-text">Top IPTV Subscriptions</div>
-                    <div class="special-offer-mbps">
-                        <span>Stability</span>
-                        <h3 class="title">Clarity</h3>
-                        <p>Speed</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="section-title mb-40">
-                    <h2 class="title">Enjoy All Channels in One Place!</h2>
-                </div>
-                <div class="special-offer-content">
-                    <p>Explore a massive library of local and international channels, encrypted and free, in high quality and without interruptions. All your favorite content—sports, movies, entertainment, and more—in one place!</p>
-                    <br>
-                    <a target="_blank" href="/prices_en.html" class="btn transparent-btn">Subscribe Now</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- cta-area -->
-<section class="cta-area cta-bg jarallax" data-background="assets/imgs/bg/cta_bg.jpg">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-xl-9 col-lg-10">
-                <div class="cta-content text-center">
-                    <div class="section-title white-title mb-35">
-                        <h2 class="title">Exceptional Customer Support</h2>
-                        <br>
-                        <h3 style="color: white;">We're always here to help! Contact us on WhatsApp for 7-day support and quick assistance.</h3>
-                    </div>
-                    <div class="cta-btn-wrap">
-                        <a target="_blank" href="https://wa.me/970599611647" class="btn transparent-btn">Contact Us</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- subscribe-area -->
-<section class="subscribe-area subscribe-bg" data-background="assets/imgs/bg/subscribe_bg.jpg">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-xl-7 col-lg-6">
-                <div class="subscribe-img wow fadeInLeft" data-wow-delay=".2s">
-                    <img src="assets/imgs/images/subscribe_img.png" alt="">
-                </div>
-            </div>
-            <div class="col-xl-5 col-lg-6">
-                <div class="section-title mb-30">
-                    <h2 class="title">Enjoy the Largest VOD Library</h2>
-                </div>
-                <div class="subscribe-content">
-                    <p>With your subscription, you'll enjoy a rich library of over 30,000 movies and 7,000 series, all organized by category for easy access and search.</p>
-                    <h4 class="title">New content is added daily — including episodes, films, and series so you're always up-to-date!</h4>
-                    <div class="subscribe-plan">
-                        <h2 class="price"><span>Only</span> 25$<sub> / 6 Months</sub></h2>
-                        <a target="_blank" href="/prices_en.html" class="btn btn-link">Subscribe Now</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- faq-area -->
-<section class="faq-area section-space-top section-meadium-bottom">
-    <div class="container">
-        <div class="row align-items-center align-items-xl-end">
-            <div class="col-lg-6">
-                <div class="section-title mb-40">
-                    <h2 class="title">Frequently Asked Questions</h2>
-                </div>
-                <div class="faq-wrapper">
-                    <div class="accordion" id="accordionExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingOne">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                                    data-bs-target="#collapseOne" aria-expanded="true"
-                                    aria-controls="collapseOne">
-                                    Which payment methods are accepted?
-                                </button>
-                            </h2>
-                            <div id="collapseOne" class="accordion-collapse collapse show"
-                                aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    * Credit Card<br>* PayPal
+                        <div class="col-lg-3 col-md-6 col-sm-9">
+                            <div class="pricing-item mb-30">
+                                <div>
+                                    <img src="assets/imgs/images/TV/NEO4K.png" alt="">
+                                </div>
+                                <div class="pricing-content">
+                                    <ul class="pricing-list">
+                                        <h3 class="title" style="direction: ltr; text-align: center; font-family: var(--bd-ff-body); color: #375cf8 !important;">NEO4K</h3>
+                                        <br>
+                                        <li><img src="assets/imgs/icons/check.png" alt=""> جودة مشاهدة فائقة: FHD و 4K</li>
+                                <li><img src="assets/imgs/icons/check.png" alt=""> أكثر من 14,000 قناة</li>
+                                <li><img src="assets/imgs/icons/check.png" alt=""> أكثر من 65,000 فيلم ومسلسل (VOD)</li>
+                                <li><img src="assets/imgs/icons/check.png" alt=""> مصادر متعددة لقنوات الرياضة</li>
+                                <li><img src="assets/imgs/icons/check.png" alt=""> متاح تجربة مجانية </li>
+                                <li><img src="assets/imgs/icons/check.png" alt=""> متاح لوحات موزعين</li>
+                                    </ul>
+                                    <div class="price-wrap">
+                                        <a href="details.html" class="btn btn-primary">تفاصيل الاشتراك</a>
+                                    </div>
+                                    <!--<div class="pricing-btn">
+                                        <a href="pricing.html" class="btn btn-link">View Plans</a>
+                                    </div>-->
                                 </div>
                             </div>
                         </div>
-
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingTwo">
-                                <button class="accordion-button collapsed" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                                    aria-expanded="false" aria-controls="collapseTwo">
-                                    Which devices can I use to watch IPTV?
-                                </button>
-                            </h2>
-                            <div id="collapseTwo" class="accordion-collapse collapse"
-                                aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    ✅ Our IPTV service supports:<br>
-                                    All Smart TVs (Samsung, Sony, LG),<br>
-                                    All Android devices (phones, tablets),<br>
-                                    Apple TV, iPhones,<br>
-                                    Google Chromecast,<br>
-                                    Amazon FireStick.
+                        <div class="col-lg-3 col-md-6 col-sm-9">
+                            <div class="pricing-item mb-30">
+                                <div>
+                                    <img src="assets/imgs/images/TV/HYDRA.png" alt="">
+                                </div>
+                                <div class="pricing-content">
+                                    <ul class="pricing-list">
+                                        <h3 class="title" style="direction: ltr; text-align: center; font-family: var(--bd-ff-body); color: #375cf8 !important;">HYDRA</h3>
+                                        <br>
+                                        <li><img src="assets/imgs/icons/check.png" alt=""> جودة مشاهدة فائقة: FHD و 4K</li>
+                                <li><img src="assets/imgs/icons/check.png" alt=""> أكثر من 11,000 قناة</li>
+                                <li><img src="assets/imgs/icons/check.png" alt=""> أكثر من 36,000 فيلم ومسلسل (VOD)</li>
+                                <li><img src="assets/imgs/icons/check.png" alt=""> مصادر متعددة لقنوات الرياضة</li>
+                                <li><img src="assets/imgs/icons/check.png" alt=""> متاح تجربة مجانية </li>
+                                <li><img src="assets/imgs/icons/check.png" alt=""> متاح لوحات موزعين</li>
+                                    </ul>
+                                    <div class="price-wrap">
+                                        <a href="details.html" class="btn btn-primary">تفاصيل الاشتراك</a>
+                                    </div>
+                                    <!--<div class="pricing-btn">
+                                        <a href="pricing.html" class="btn btn-link">View Plans</a>
+                                    </div>-->
                                 </div>
                             </div>
                         </div>
-
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingThree">
-                                <button class="accordion-button collapsed" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                                    aria-expanded="false" aria-controls="collapseThree">
-                                    Which internet speed is recommended?
-                                </button>
-                            </h2>
-                            <div id="collapseThree" class="accordion-collapse collapse"
-                                aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    We recommend a minimum download speed of 30 Mbps for smooth, high-quality streaming.<br>
-                                    Not sure about your speed? Request a 1-day free trial before subscribing!
+                        <div class="col-lg-3 col-md-6 col-sm-9">
+                            <div class="pricing-item mb-30">
+                                <div>
+                                    <img src="assets/imgs/images/TV/AROMA.png" alt="">
                                 </div>
-                            </div>
-                        </div>
+                                <div class="pricing-content">
+                                    <ul class="pricing-list">
+                                        <h3 class="title" style="direction: ltr; text-align: center; font-family: var(--bd-ff-body); color: #375cf8 !important;">AROMA</h3>
+                                        <br>
+                                        <li><img src="assets/imgs/icons/check.png" alt=""> جودة مشاهدة فائقة: FHD و 4K</li>
+                                <li><img src="assets/imgs/icons/check.png" alt=""> أكثر من 11,000 قناة</li>
+                                <li><img src="assets/imgs/icons/check.png" alt=""> أكثر من 25,000 فيلم ومسلسل (VOD)</li>
+                                <li><img src="assets/imgs/icons/check.png" alt=""> مصادر متعددة لقنوات الرياضة</li>
+                                <li><img src="assets/imgs/icons/check.png" alt=""> متاح تجربة مجانية </li>
+                                <li><img src="assets/imgs/icons/check.png" alt=""> متاح لوحات موزعين</li>
+                                    </ul>
+                                    <div class="price-wrap">
+                                        <a href="details.html" class="btn btn-primary">تفاصيل الاشتراك</a>
+                                    </div>
 
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingFour">
-                                <button class="accordion-button collapsed" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#collapseFour"
-                                    aria-expanded="false" aria-controls="collapseFour">
-                                    Does the subscription include adult content?
-                                </button>
-                            </h2>
-                            <div id="collapseFour" class="accordion-collapse collapse"
-                                aria-labelledby="headingFour" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    RK IPTV subscriptions do not include any adult (+18) content.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item">
-                            <h2 class="accordion-header" id="headingFive">
-                                <button class="accordion-button collapsed" type="button"
-                                    data-bs-toggle="collapse" data-bs-target="#collapseFive"
-                                    aria-expanded="false" aria-controls="collapseFive">
-                                    How many devices can use the subscription at once?
-                                </button>
-                            </h2>
-                            <div id="collapseFive" class="accordion-collapse collapse"
-                                aria-labelledby="headingFive" data-bs-parent="#accordionExample">
-                                <div class="accordion-body">
-                                    You can install your account on multiple devices, but it works on only one device at a time.
+                                    <!--<div class="pricing-btn">
+                                        <a href="pricing.html" class="btn btn-link">View Plans</a>
+                                    </div>-->
                                 </div>
                             </div>
                         </div>
@@ -479,90 +622,350 @@
                 </div>
             </div>
 
-            <div class="col-lg-6">
-                <div class="faq-map-area">
-                    <div class="faq-map-title">
-                        <h4 class="title">We’re with you everywhere</h4>
-                        <p>If you have any questions, contact us directly via WhatsApp!</p>
+            <div class="text-center my-4">
+  <a href="receiver-packages.html" class="btn btn-primary mx-2">عرض باقات الرسيفر</a>
+  <a href="tv-packages.html" class="btn btn-secondary mx-2">عرض باقات التلفزيون</a>
+</div>
+
+        </section>
+        <!-- pricing-area-end -->
+
+        
+
+        <!-- video-area -->
+        <section class="video-area video-bg" data-background="assets/imgs/bg/bg.png">
+            <div class="container">
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-lg-4">
+                        <!--<div class="video-paly">
+                            <a href="https://www.youtube.com/watch?v=XHOmBV4js_E" class="popup-video"><i
+                                    class="fas fa-play"></i></a>
+                        </div>-->
                     </div>
-                    <div class="faq-map text-center">
-                        <img src="assets/imgs/images/map_img.png" alt="">
+                    <div class="col-xl-6 col-lg-7 text-column">
+                        <div class="section-title mb-40" style="direction: rtl; text-align: right; padding-right:0px">
+                            <h2 class="title">باقات من أكثر من 100 دولة حول العالم</h2>
+                        </div>
+                        <div class="banner-content" >
+                            <p style="direction: rtl; text-align: right;"> نوفّر محتوى بجودات متعددة بما يتناسب مع سرعة الإنترنت لديك، لتستمتع بخدمة IPTV أينما كنت وعلى أي جهاز تفضّله، سواء كان هاتفًا ذكيًا، تلفزيونًا، جهاز أندرويد بوكس أو حتى كمبيوتر. </p>
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="fact-item" style="text-align: center;">
+                                            <h4 class="title" style="direction: ltr; display: inline-block;"><span class="odometer" data-count="4"></span>K</h4>
+                                            <p>دقة عرض مذهلة</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <div class="fact-item" style="text-align: center;">
+                                            <h4 class="title" style="direction: ltr; display: inline-block;"><span class="odometer" data-count="30000"></span>+</h4>
+                                            <p>قنوات تلفزيونية عبر الإنترنت</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <a target="_blank" href="/prices.html" class="btn">اشترك الان</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-</main>
-<!-- footer -->
-<footer>
-    <div class="footer-wrap">
-        <div class="container">
-            <div class="row g-0">
-                <div class="col-3">
-                    <div class="footer-widget">
-                        <div class="footer-call">
-                            <div class="icon"><i class="flaticon-support"></i></div>
-                            <div class="content">
-                                <span>Message us</span>
-                                <h6 class="title"><a href="https://wa.me/970599611647" target="_blank">+970 599611647</a></h6>
+        </section>
+        <!-- video-area-end -->
+
+       
+
+        <!-- special-offer-area -->
+        <section class="special-offer-area section-space-top section-meadium-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 order-0 order-lg-2">
+                        <div class="special-offer-img wow fadeInRight" data-wow-delay=".2s">
+                            <img src="assets/imgs/slider/DRSAT3.png" alt="">
+                            <div class="special-offer-text">أقوى الاشتراكات</div>
+                            <div class="special-offer-mbps">
+                                <span>ثبات</span>
+                                <h4 class="title" style="font-size:30px">وضوح</h4>
+                                <p>سرعة</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="section-title mb-40">
+                            <h2 class="title" style="direction: rtl;">كل القنوات بين يديك في مكان واحد!</h2>
+                        </div>
+                        <div class="special-offer-content" style="direction: rtl;">
+                              <p style="font-weight: bold; color:black">استمتع بباقات شاملة تضم جميع القنوات العربية والعالمية، سواء المشفّرة أو المفتوحة، بجودة فائقة وبثبات مميز. ستجد كل ما تبحث عنه من رياضة
+                                ، أفلام، ترفيه والمزيد - كل هذا في تطبيق واحد.
+  </p>
+                            <!--<div class="special-price-wrap">
+                                <h2 class="special-price"><sup>$</sup>25<sub>Monthly</sub></h2>
+                                <p class="trial-link"><i class="flaticon-wifi-router"></i><a href="contact.html">Try
+                                        Free For 1 Month</a></p>
+                            </div>-->
+                            <br>
+                            <a target="_blank" href="/prices.html" class="btn">اشترك الان</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- special-offer-area-end -->
+        
+        <!-- cta-area -->
+        <section class="cta-area cta-bg jarallax" data-background="assets/imgs/bg/support.jpg">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-9 col-lg-10">
+                        <div class="cta-content text-center">
+                            <div class="section-title white-title mb-35">
+                                <h2 class="title" style="direction: rtl;">دعم فني على مدار الساعة</h2>
+                                <br>
+                                <h3 style="direction: rtl; color: white;">فريقنا جاهز دائمًا لخدمتك! تواصل معنا عبر واتساب لتحصل على مساعدة سريعة واحترافية متاحة طوال أيام الأسبوع.</h3>
+                            </div>
+                           <div class="cta-btn-wrap">
+                              <a target="_blank" 
+                               href="https://api.whatsapp.com/send/?phone=970598900377" 
+                               class="btn">
+                               تواصل معنا
+                              </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- cta-area-end -->
+
+        <!-- subscribe-area -->
+        <section class="subscribe-area subscribe-bg" data-background="assets/imgs/bg/subscribe_bg.jpg">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-7 col-lg-6">
+                        <div class=" wow fadeInLeft" data-wow-delay=".2s">
+                            <img src="assets/imgs/slider/DRSAT4.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-6">
+                        <div class="section-title mb-30">
+                            <h2 class="title" style="direction: rtl; text-align: right;">تمتّع بأضخم مكتبة أفلام ومسلسلات (VOD)</h2>
+                        </div>
+                        <div class="subscribe-content">
+                            <p style="direction: rtl; text-align: right;">مع اشتراكك، تحصل على تجربة مشاهدة استثنائية من خلال مكتبة هائلة تضم أكثر من 80,000 فيلم و 10,000 مسلسل مصنّفة ومنظّمة ضمن باقات لتسهيل عملية البحث والوصول لما تفضّله.</p>
+                            <h4 class="title" style="direction: rtl; text-align: right;">نحرص يوميًا على إضافة أحدث حلقات المسلسلات وأفضل الأفلام، لتبقى دائمًا على متابعة لكل جديد.
+                            <div class="subscribe-plan">
+                                <h2 class="price"><span>ابتداء من</span> $20<sub>   / 12 شهر</sub></h2>
+                                <a target="_blank" href="/prices.html" class="btn btn-link">اشترك الان</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-2">
-                    <div class="footer-widget">
-                        <div class="fw-title"><h4 class="title">Plans</h4></div>
-                        <ul class="fw-list">
-                            <li><a>- RK Ultra Plus</a></li>
-                            <li><a>- RK Ultra</a></li>
-                            <li><a>- RK Premium</a></li>
-                            <li><a>- RK Max</a></li>
-                            <li><a>- RK Plus</a></li>
-                        </ul>
+            </div>
+        </section>
+        <!-- subscribe-area-end -->
+
+        <!-- faq-area -->
+        <section class="faq-area section-space-top section-meadium-bottom">
+            <div class="container" style="direction: rtl; text-align: right;">
+                <div class="row align-items-center align-items-xl-end">
+                    <div class="col-lg-6">
+                        <div class="section-title mb-40">
+                            <h2 class="title">الأسئلة الشائعة</h2>
+                        </div>
+                        <div class="faq-wrapper">
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#collapseOne" aria-expanded="true"
+                                            aria-controls="collapseOne">
+                                            ما هي وسائل الدفع المتوفرة؟
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show"
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            * Bank Transfer<br>* PayPal<br>* On Delivery
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                                            aria-expanded="false" aria-controls="collapseTwo">
+                                            الأجهزة التي يمكنك استخدامها لمشاهدة IPTV
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse"
+                                        aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            ✅ خدمة IPTV الخاصة بنا متوافقة مع جميع الأجهزة الذكية، بما في ذلك:<br>
+- أجهزة التلفزيون الذكية مثل Samsung، Hisense، Toshiba، LG.<br>
+- تلفزيونات الأندرويد مثل HAIER،SKYWORTH، Sony، TCL.<br>
+- أجهزة التي في بوكس والموبايل الأندرويد.<br>
+- Apple TV ، وموبايل iPhone<br>
+- أجهزة Amazon FireStick، Google Chromecast
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseThree"
+                                            aria-expanded="false" aria-controls="collapseThree">
+                                            ما هي سرعة الإنترنت الموصى بها؟
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse"
+                                        aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            إذا كانت سرعة التحميل لديك لا تقل عن 30 ميجابت في الثانية، فستعمل الخدمة بسلاسة وبأعلى جودة ممكنة.<br>
+وإذا لم تكن متأكدًا من سرعة الإنترنت لديك، يمكنك طلب تجربة مجانية ليوم واحد لاختبار الجودة قبل الاشتراك.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingFour">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseFour"
+                                            aria-expanded="false" aria-controls="collapseFour">
+                                            هل هناك إمكانية للوصول إلى قنوات البالغين ضمن الاشتراك؟
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFour" class="accordion-collapse collapse"
+                                        aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                             جميع اشتراكات دكتورسات لا تحتوي على أي قنوات للكبار (+18).
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingFive">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                                            aria-expanded="false" aria-controls="collapseFive">
+                                            كم جهاز يمكنه استخدام الاشتراك في نفس الوقت؟
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFive" class="accordion-collapse collapse"
+                                        aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            يمكنك تثبيت حسابك على عدة أجهزة، ولكن يرجى ملاحظة أن الخدمة تعمل على جهاز واحد فقط في نفس الوقت.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-2">
-                    <div class="footer-widget">
-                        <div class="fw-title"><h4 class="title">Quick Links</h4></div>
-                        <ul class="fw-list">
-                            <li><a href="https://rk-player.com">RK Player</a></li>
-                            <li><a href="sort_en.html">Sort Packages</a></li>
-                            <li><a href="https://rkiptv.com/search/">Search Library</a></li>
-                            <li><a href="http://player.rkiptv.com/index_en.html">Web Player</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-1">
-                    <div class="footer-widget">
-                        <div class="fw-title"><h4 class="title">Working Hours</h4></div>
-                        <ul class="fw-schedule-list">
-                            <li>Saturday - Thursday <span>8:30 AM - 8 PM</span></li>
-                        </ul>
+                    <div class="col-lg-6">
+                        <div class="faq-map-area">
+                            <div class="faq-map-title">
+                                <h4 class="title">نحن معك في كل مكان</h4>
+                                <p>لأي استفسارات ، تواصل معنا مباشرة عبر واتساب!</p>
+                            </div>
+                            <div class="faq-map text-center">
+                                <img src="assets/imgs/slider/ditu.1738e28.png" alt="">
+                                <!--<a href="contact.html" class="btn map-btn">Check Your Network Coverage</a>-->
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
+        <!-- faq-area-end -->
+
+       
+
+
+    </main>
+    <!-- main-area-end -->
+
+
+  
+
+
+    <!-- footer-area -->
+    <footer>
+        </section>
     <div class="copyright-wrap">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-4">
-                    <div class="footer-logo">
-                        <a href="index_en.html"><img src="assets/imgs/logo/logo.png" alt=""></a>
-                    </div>
-                </div>
-                <div class="col-md-8">
-                    <div class="copyright-text text-center text-md-end">
-                        <p>Copyright © <a href="https://rkiptv.com/index_en.html" target="_blank">RKIPTV</a> – All Rights Reserved</p>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-4">
+            <div class="footer-logo">
+              <a href="index.html"><img src="assets/imgs/logo/logo.png" alt=""></a>
             </div>
-        </div>
-    </div>
-</footer>
+          </div>
+          <div class="col-md-8">
+            <div class="copyright-text text-center text-md-end">
+              <p>Copyrighted by <a href="https://DRSAT.com" target="_blank">@DRSAT</a> - All Right Reserved</p>
+              <div class="footer-icons">
+  <a href="https://facebook.com/drsatellite.nablus" target="_blank"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://tiktok.com/@drsat.nablus" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+  <a href="https://wa.me/970598900377" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</div>
 
-<!-- JS here -->
+            </div>
+
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+    </footer>
+    <!-- footer-area-end -->
+
+
+    <script>
+
+     const t=document.getElementById('logos'), box=t.parentElement;
+while(t.scrollWidth < box.clientWidth*2) t.innerHTML += t.innerHTML;
+
+         // Sticky Header
+    $(window).on('scroll', function () {
+      var scroll = $(window).scrollTop();
+      if (scroll < 200) {
+        $("#sticky-header").removeClass("sticky-menu");
+      } else {
+        $("#sticky-header").addClass("sticky-menu");
+      }
+    });
+
+    // عرض / إغلاق المودال
+    function openModal(id) {
+      document.getElementById(id).style.display = "block";
+    }
+
+    function closeModal(id) {
+      document.getElementById(id).style.display = "none";
+    }
+
+    // إغلاق المودال عند الضغط بالخارج
+    window.onclick = function (event) {
+      const modals = document.querySelectorAll('.policy-modal');
+      modals.forEach(modal => {
+        if (event.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    }
+
+    // القائمة الجانبية للجوال
+    function toggleMobileMenu() {
+      document.body.classList.toggle('mobile-menu-visible');
+    }
+    </script>
+
+ 
+
+
+
+
+
+
+    <!-- JS here -->
     <script src="assets/js/vendor/jquery-3.7.1.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/jquery.magnific-popup.min.js"></script>
@@ -577,6 +980,8 @@
     <script src="assets/js/swiper.min.js"></script>
     <script src="assets/js/wow.min.js"></script>
     <script src="assets/js/main.js"></script>
+
+    
 </body>
 
 </html>
