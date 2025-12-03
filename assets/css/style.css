@@ -4233,19 +4233,14 @@ header, .menu-area, .navbar {
   outline: 0;
   box-shadow: none;
 }
-.accordion-button::after {
-  display: none;
-}
+
 .accordion-button::before {
-  content: "\f067";
+
   font-size: 16px;
   font-family: var(--bd-ff-fontawesome);
   font-weight: 400;
   transition: 0.3s ease-in;
   margin-right: 25px;
-}
-.accordion-button:not(.collapsed)::before {
-  content: "\f068";
 }
 
 .accordion-body {
