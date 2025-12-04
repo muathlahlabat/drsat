@@ -145,6 +145,52 @@
 
     /* ✅ تنسيق شاشة الموبايل */
     @media (max-width: 768px) {
+
+      .banner-content {
+    text-align: center !important; /* يخلي كل العناصر داخلها بالنص */
+  }
+
+  /* نضبط الزر */
+  .banner-content .btn {
+    display: inline-block;        /* يخليه ياخذ عرض النص فقط */
+    margin: 15px auto !important; /* يوسّطه أفقيًا ويضيف فراغ فوق وتحت */
+    text-align: center;           /* يخلي النص داخل الزر بالنص */
+  }
+
+  /* توسيط كل الأزرار من نوع btn بالشاشات الصغيرة */
+  a.btn {
+    display: block;              /* يخلي الزر ياخذ سطر لحاله */
+    margin: 15px auto !important; /* يخليه بالنص ويضيف فراغ فوق وتحت */
+    text-align: center;          /* النص داخل الزر بالنص */
+    width: fit-content;          /* عرضه على قد النص */
+  }
+
+  /* إذا بتحبي يكون أوسع شوي (أنيق أكثر) */
+  a.btn.btn-primary {
+    width: 70%;                  /* خليه بعرض 70% من الشاشة */
+    max-width: 300px;            /* وما يزيد عن 300px */
+  }
+
+      .btn, 
+  .btn-primary, 
+  .btn-secondary {
+    display: block;
+    width: 50%;
+    margin: 10px auto; /* ← هاي تضيف مسافة متساوية بين الأزرار */
+    text-align: center;
+  }
+
+  /* إذا أردتِ المسافة أكبر شوي */
+  .btn + .btn {
+    margin-top: 15px !important; /* ← يضيف فراغ بين الزرين */
+  }
+
+  .btn, 
+  .btn-primary {
+    display: block;
+    margin: 0 auto !important; /* يخليه بالنص أفقيًا */
+    text-align: center !important;
+  }
       .product-columns {
         flex-direction: column-reverse !important;
       }
@@ -312,7 +358,181 @@
   color: #25D366; /* أخضر واتساب */
 }
 
+.text-column a.btn {
+    display: block;               /* يخلي الزر ياخذ سطر لحاله */
+    margin: 15px auto !important; /* يخليه بالنص أفقيًا ويضيف مسافة فوق وتحت */
+    text-align: center;           /* النص داخل الزر بالنص */
+    width: fit-content;           /* يخلي عرضه حسب محتواه */
+  }
+
+  .price-wrap {
+    text-align: center !important; /* يخلي أي عنصر داخله بالنص */
+  }
+
+  /* نضبط الزر نفسه */
+  .price-wrap .btn {
+    display: inline-block;       /* يخليه ياخذ حجم النص فقط */
+    margin: 15px auto !important; /* مسافة بسيطة فوق وتحت وتوسيط أفقي */
+    text-align: center;          /* النص داخل الزر بالنص */
+  }
+
+   /* نحرك الخلفية لليمين */
+  .cta-area,
+  section.cta-area.cta-bg.jarallax {
+    background-position-x: 100% !important; /* يخلي الصورة تلتصق باليمين */
+    background-position-y: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+  }
+
+  /* نحرك كمان الشفافية (overlay) */
+  .cta-area::before,
+  .cta-bg::before,
+  .cta-area .overlay {
+    right: 0 !important;
+    left: auto !important;
+    width: 100% !important;
+    background-position: right center !important;
+  }
+
+  /* نخلي النص مكانه */
+  .cta-content {
+    text-align: center !important;
+    margin: 0 auto !important;
+    padding: 0 25px !important;
+  }
+
+  .row {
+  --bs-gutter-x: 0px;
+}
+
     }
+
+   /* ✅ الشاشات حتى 992px (تابلت وموبايلات كبيرة) */
+ @media (min-width: 769px) and (max-width: 992px) {
+
+
+
+  .product-columns {
+    display: flex;
+    flex-direction: column-reverse !important; /* النص بعد الصورة */
+    align-items: center; /* يوسّط المحتوى أفقيًا */
+    text-align: center;  /* يخلي النص بالوسط */
+  }
+
+  .product-columns img {
+    width: 80%;
+    height: auto;
+    margin-bottom: 20px; /* فراغ بسيط تحت الصورة */
+  }
+
+  .text-column {
+    text-align: center;
+    direction: rtl; /* لأنك بالعربي */
+  }
+
+  /* الهيدر */
+  header, .menu-area {
+    height: auto !important;
+    padding: 10px 0 !important;
+    background-color: #fff;
+  }
+
+  .logo img {
+    width: 75px !important;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .mobile-menu-toggle {
+    display: inline-block;
+        position: relative;
+        background: none;
+        border: none;
+        font-size: 30px !important;
+        color: #111827;
+        cursor: pointer;
+        z-index: 1000;
+        padding: 5px;
+        top: 5px;
+        margin-left: 10px;
+  }
+
+  /* البانر */
+  .banner-area {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+  }
+
+  .banner-area h1, 
+  .banner-area h2, 
+  .banner-area p {
+    text-align: center;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 0 15px;
+  }
+
+  .banner-area .btn {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  /* الصور الكبيرة */
+  .banner-img img,
+  .product-image img {
+    width: 80% !important;
+    height: auto !important;
+    display: block;
+    margin: 10px auto;
+  }
+
+  /* عناوين الأسعار */
+  h2, h3 {
+    font-size: 20px !important;
+    text-align: center !important;
+  }
+
+  /* الفوتر */
+  .footer-icons {
+    text-align: center !important;
+    margin-top: 20px;
+  }
+
+  .footer-icons a {
+    font-size: 24px;
+    margin: 0 8px;
+  }
+
+  /* واتساب */
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+
+  /* تأثير hover بلون الشعار */
+.footer-icons a:hover .fa-facebook-f {
+  color: #1877F2; /* أزرق فيسبوك */
+}
+
+.footer-icons a:hover .fa-tiktok {
+  color: #000; /* وردي إنستغرام */
+}
+
+.footer-icons a:hover .fa-whatsapp {
+  color: #25D366; /* أخضر واتساب */
+}
+}
+
+
 
     .top-info ul {
       display: flex;
@@ -349,8 +569,82 @@
     to{
         transform:translateX(-50%)
     }
+
+    
 }
 
+
+.btn-custom {
+  display: inline-block;
+  background-color: #375cf8;   /* الأزرق الأساسي للموقع */
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 40px;         /* زوايا ناعمة */
+  padding: 15px 40px;          /* حجم مريح */
+  font-size: 18px;
+  text-decoration: none;
+  margin: 10px;
+  transition: all 0.3s ease;
+  width: 250px;                /* نفس العرض للزرين */
+  text-align: center;
+}
+
+/* تأثير عند المرور */
+.btn-custom:hover {
+  background-color: #2749c9;   /* أزرق غامق عند hover */
+  transform: scale(1.05);
+}
+
+/* للموبايل */
+@media (max-width: 768px) {
+  .btn-custom {
+    width: 50%;                /* يملأ العرض تقريبًا */
+    font-size: 16px;
+    padding: 12px 25px;
+  }
+
+  .row {
+    --bs-gutter-x: 0 !important; /* يلغي المسافة الأفقية بين الأعمدة */
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  .col,
+  [class*="col-"] {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  
+
+  .faq-wrapper .accordion-button {
+  direction: rtl !important;           /* النص من اليمين لليسار */
+  text-align: right !important;         /* محاذاة النص يمين */
+  justify-content: space-between !important; /* يوزّع النص والأيقونة صح */
+  align-items: center;
+}
+
+/* أيقونة السهم الافتراضية تبقى يسار النص */
+.faq-wrapper .accordion-button::after {
+  order: -1; /* يخلي السهم قبل النص بالعربية */
+  margin-left: 10px !important;
+  margin-right: 0 !important;
+}
+
+/* الأيقونة داخل النص (مثلاً ✅) */
+.faq-wrapper .accordion-button span,
+.faq-wrapper .accordion-button i {
+  margin-left: 6px;  /* مسافة بسيطة بعد الأيقونة */
+}
+
+/* تأكد أن كل عنصر سؤال تحته مسافة بسيطة */
+.faq-wrapper .accordion-item {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+
+}
 
 
   </style>
@@ -370,6 +664,13 @@
         <link rel="stylesheet" href="assets/css/slick.css">
         <link rel="stylesheet" href="assets/css/default.css">
         <link rel="stylesheet" href="assets/css/style.css">
+<style>
+        /* يخفي السهم لكل أزرار الأكورديون */
+.accordion-button::after {
+  display: none !important;
+  /* أو content: none !important; */
+}
+</style>
 </head>
 
 <body>
@@ -626,8 +927,8 @@
             </div>
 
             <div class="text-center my-4">
-  <a href="receiver-packages.html" class="btn btn-primary mx-2">عرض باقات الرسيفر</a>
-  <a href="tv-packages.html" class="btn btn-secondary mx-2">عرض باقات التلفزيون</a>
+  <a href="receiver-packages.html" class="btn-custom">عرض باقات الرسيفر</a>
+  <a href="tv-packages.html" class="btn-custom">عرض باقات التلفزيون</a>
 </div>
 
         </section>
@@ -1001,6 +1302,9 @@ while(t.scrollWidth < box.clientWidth*2) t.innerHTML += t.innerHTML;
     function toggleMobileMenu() {
       document.body.classList.toggle('mobile-menu-visible');
     }
+
+    document.querySelector('.cta-area').style.backgroundPosition = "right center";
+
     </script>
 
  
